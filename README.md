@@ -2,6 +2,8 @@
 
 This is an early iteration of an agentic council POC. Later iterations remain private.
 
+<video controls src="assets/demo.mp4" title=""></video>
+
 An **evidence-grounded multi-agent deliberation platform**. You give it a
 prompt; a roster of specialist agents research it against real data sources
 (via MCP), write typed, cited claims, challenge each other's claims with
