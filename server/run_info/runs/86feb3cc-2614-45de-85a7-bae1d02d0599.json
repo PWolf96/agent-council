@@ -1,0 +1,3442 @@
+{
+  "id": "86feb3cc-2614-45de-85a7-bae1d02d0599",
+  "status": "completed",
+  "error": null,
+  "created_at": 1781455999.9394274,
+  "completed_at": 1781456095.1311414,
+  "prompt": "Give me a list of the top 5 most effective players this season. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+  "topic": "Give me a list of the top 5 most effective players this season. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+  "teamId": "football_team_board",
+  "teamName": "Football Team Board",
+  "smartRouting": false,
+  "agentKeys": [
+    "context_sentiment_analyst",
+    "current_form_analyst",
+    "tactical_performance_analyst"
+  ],
+  "agents": [
+    {
+      "key": "current_form_analyst",
+      "label": "Current Form Analyst"
+    },
+    {
+      "key": "tactical_performance_analyst",
+      "label": "Tactical Performance Analyst"
+    }
+  ],
+  "config": {
+    "defaultModel": "gpt-4o-mini",
+    "agentModels": {},
+    "maxPasses": 3,
+    "perPassBudget": 4,
+    "smartRouting": false
+  },
+  "routing": {
+    "enabled": false,
+    "selected": [
+      {
+        "key": "current_form_analyst",
+        "label": "Current Form Analyst"
+      },
+      {
+        "key": "tactical_performance_analyst",
+        "label": "Tactical Performance Analyst"
+      }
+    ],
+    "skipped": [
+      {
+        "key": "context_sentiment_analyst",
+        "label": "Context Sentiment Analyst"
+      }
+    ],
+    "reasoning": "The question requires an assessment of player effectiveness based on specific performance metrics, necessitating a scouting approach to evaluate players qualitatively and quantitatively."
+  },
+  "insufficientAgents": null,
+  "result": {
+    "rounds": 2,
+    "debateHistory": [
+      {
+        "round": 1,
+        "agent": "Tactical Performance Analyst",
+        "argument": "[C01] (confidence 0.75) Anthony Martial is among the top effective players this season, with a high goals per shot ratio of 0.22 and 9 goals scored (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Tactical Performance Analyst",
+        "argument": "[C02] (confidence 0.8) Eric Maxim Choupo-Moting has a remarkable goals per shot ratio of 0.35, scoring 9 goals from only 26 shots, making him one of the most effective players this season (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Tactical Performance Analyst",
+        "argument": "[C03] (confidence 0.7) Granit Xhaka has scored 9 goals with a goals per shot ratio of 0.18, indicating solid attacking output this season (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Tactical Performance Analyst",
+        "argument": "[C04] (confidence 0.65) Eddie Nketiah, despite having 9 goals, has a lower goals per shot ratio of 0.13, suggesting less efficiency compared to other top players (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C05] (confidence 0.8) Anthony Martial has scored 9 goals from 37 shots, with a goals per shot ratio of 0.22 (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C06] (confidence 0.7) Eddie Nketiah has scored 9 goals from 72 shots, with a goals per shot ratio of 0.13 (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C07] (confidence 0.6) Federico Valverde has scored 9 goals from 98 shots, with a goals per shot ratio of 0.09 (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C08] (confidence 0.85) Eric Maxim Choupo-Moting has scored 9 goals from 26 shots, with a goals per shot ratio of 0.35 (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C09] (confidence 0.65) Granit Xhaka has scored 9 goals from 51 shots, with a goals per shot ratio of 0.18 (E02).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E02"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "agent": "Tactical Performance Analyst",
+        "argument": "Challenge X01 (inference_dispute, major) by Current Form Analyst on C01 \u2192 owner revise; confidence 0.75\u21920.6789 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Tactical Performance Analyst",
+        "argument": "Challenge X02 (inference_dispute, major) by Current Form Analyst on C03 \u2192 owner revise; confidence 0.7\u21920.6218 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Tactical Performance Analyst",
+        "argument": "Challenge X03 (inference_dispute, minor) by Current Form Analyst on C04 \u2192 owner revise; confidence 0.65\u21920.5669 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X04 (inference_dispute, major) by Tactical Performance Analyst on C05 \u2192 owner revise; confidence 0.8\u21920.7381 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X05 (inference_dispute, major) by Tactical Performance Analyst on C06 \u2192 owner revise; confidence 0.7\u21920.6218 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X06 (inference_dispute, major) by Tactical Performance Analyst on C07 \u2192 owner revise; confidence 0.6\u21920.5139 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X07 (inference_dispute, minor) by Tactical Performance Analyst on C08 \u2192 owner revise; confidence 0.85\u21920.7997 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X08 (inference_dispute, major) by Tactical Performance Analyst on C09 \u2192 owner revise; confidence 0.65\u21920.5669 [revised]",
+        "tool_calls": []
+      }
+    ],
+    "roundSummaries": [],
+    "judgeHistory": [
+      {
+        "round": 2,
+        "reasoning": "Decision confidence 0.6564. Supporting claims: ['C02', 'C08', 'C05', 'C01', 'C03', 'C06', 'C04', 'C09', 'C07']. No surviving dissent.",
+        "scoreBreakdown": "decision_confidence = 0.6564",
+        "scores": null,
+        "verdict": "1. **Eric Maxim Choupo-Moting**  \n   **Grade:** 9.5  \n   **Statistics:** 9 goals from 26 shots (Goals per shot: 0.35)  \n   Choupo-Moting's high goals per shot ratio indicates exceptional attacking effectiveness, making him the most effective player this season.\n\n2. **Anthony Martial**  \n   **Grade:** 7.5  \n   **Statistics:** 9 goals from 37 shots (Goals per shot: 0.22)  \n   Martial's performance is solid, but his lower goals per shot ratio compared to Choupo-Moting reflects less efficiency in converting shots into goals.\n\n3. **Granit Xhaka**  \n   **Grade:** 6.0  \n   **Statistics:** 9 goals from 51 shots (Goals per shot: 0.18)  \n   Xhaka has the same number of goals as Martial but is less effective in terms of shot conversion, resulting in a lower grade.\n\n4. **Eddie Nketiah**  \n   **Grade:** 5.0  \n   **Statistics:** 9 goals from 72 shots (Goals per shot: 0.13)  \n   Nketiah's significantly lower goals per shot ratio indicates poor efficiency, placing him lower in effectiveness rankings.\n\n5. **Federico Valverde**  \n   **Grade:** 4.0  \n   **Statistics:** 9 goals from 98 shots (Goals per shot: 0.09)  \n   Valverde's very low goals per shot ratio highlights a lack of attacking effectiveness, making him the least effective player on this list.\n\n**Confidence:** The decision confidence is moderate at 0.6564, indicating a reasonable level of certainty in these rankings. There is no unresolved dissent."
+      }
+    ],
+    "decided": true,
+    "finalVerdict": "1. **Eric Maxim Choupo-Moting**  \n   **Grade:** 9.5  \n   **Statistics:** 9 goals from 26 shots (Goals per shot: 0.35)  \n   Choupo-Moting's high goals per shot ratio indicates exceptional attacking effectiveness, making him the most effective player this season.\n\n2. **Anthony Martial**  \n   **Grade:** 7.5  \n   **Statistics:** 9 goals from 37 shots (Goals per shot: 0.22)  \n   Martial's performance is solid, but his lower goals per shot ratio compared to Choupo-Moting reflects less efficiency in converting shots into goals.\n\n3. **Granit Xhaka**  \n   **Grade:** 6.0  \n   **Statistics:** 9 goals from 51 shots (Goals per shot: 0.18)  \n   Xhaka has the same number of goals as Martial but is less effective in terms of shot conversion, resulting in a lower grade.\n\n4. **Eddie Nketiah**  \n   **Grade:** 5.0  \n   **Statistics:** 9 goals from 72 shots (Goals per shot: 0.13)  \n   Nketiah's significantly lower goals per shot ratio indicates poor efficiency, placing him lower in effectiveness rankings.\n\n5. **Federico Valverde**  \n   **Grade:** 4.0  \n   **Statistics:** 9 goals from 98 shots (Goals per shot: 0.09)  \n   Valverde's very low goals per shot ratio highlights a lack of attacking effectiveness, making him the least effective player on this list.\n\n**Confidence:** The decision confidence is moderate at 0.6564, indicating a reasonable level of certainty in these rankings. There is no unresolved dissent.",
+    "roster": {
+      "question_type": "scouting",
+      "admitted_specialists": [
+        "context_sentiment_analyst",
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "admitted_researchers": [
+        "simple_stats",
+        "sentiment",
+        "odds"
+      ],
+      "dropped": []
+    },
+    "plan": {
+      "question": "Give me a list of the top 5 most effective players this season. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+      "question_type": "scouting",
+      "deliverable": {
+        "format": "a ranked list of the top 5 most effective players, each with a grade based on a grading system that includes attacking effectiveness and playing time statistics.",
+        "subjects": [],
+        "cardinality": 5,
+        "dimensions": [
+          "attacking effectiveness",
+          "playing time"
+        ],
+        "success_criteria": "The answer must include a ranked list of the top 5 players with their grades and the relevant statistics used for grading."
+      },
+      "entities": [],
+      "required_evidence": [],
+      "assigned_specialists": [
+        "tactical_performance_analyst",
+        "current_form_analyst"
+      ],
+      "assigned_researchers": [
+        "simple_stats"
+      ],
+      "researcher_briefs": {
+        "simple_stats": "Gather structured statistics on player output, shooting, and playing time for the current season."
+      },
+      "quant_models": [],
+      "reasoning": "The question requires an assessment of player effectiveness based on specific performance metrics, necessitating a scouting approach to evaluate players qualitatively and quantitatively."
+    },
+    "retrieval": {
+      "requests_run": 3,
+      "records": 3,
+      "failures": [],
+      "negatives": [],
+      "workers": 1,
+      "breadth": 3,
+      "cache_stats": {}
+    },
+    "sufficiency": {
+      "sufficient": true,
+      "covered": [],
+      "missing_evidence": [],
+      "blocking": false,
+      "note": "All planned evidence covered.",
+      "reentry_cycle": 0
+    },
+    "claims": [
+      {
+        "claim_id": "C01",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Anthony Martial is among the top effective players this season, with a high goals per shot ratio of 0.22 and 9 goals scored (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.75,
+        "confidence_history": [
+          0.75
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Martial's efficiency in converting shots into goals indicates strong attacking effectiveness.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C02",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Eric Maxim Choupo-Moting has a remarkable goals per shot ratio of 0.35, scoring 9 goals from only 26 shots, making him one of the most effective players this season (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.8,
+        "confidence_history": [
+          0.8
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "His high conversion rate suggests he is a key attacking asset.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C03",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Granit Xhaka has scored 9 goals with a goals per shot ratio of 0.18, indicating solid attacking output this season (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.7,
+        "confidence_history": [
+          0.7
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Xhaka's contribution in terms of goals showcases his effectiveness in the attacking phase.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C04",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Eddie Nketiah, despite having 9 goals, has a lower goals per shot ratio of 0.13, suggesting less efficiency compared to other top players (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.65,
+        "confidence_history": [
+          0.65
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "His higher number of shots without a proportional increase in goals indicates room for improvement in finishing.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C05",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Anthony Martial has scored 9 goals from 37 shots, with a goals per shot ratio of 0.22 (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.8,
+        "confidence_history": [
+          0.8
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Martial's efficiency in converting shots into goals is notable, making him a top performer.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C06",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Eddie Nketiah has scored 9 goals from 72 shots, with a goals per shot ratio of 0.13 (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.7,
+        "confidence_history": [
+          0.7
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Despite a high number of shots, Nketiah's lower conversion rate affects his ranking.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C07",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Federico Valverde has scored 9 goals from 98 shots, with a goals per shot ratio of 0.09 (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.6,
+        "confidence_history": [
+          0.6
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Valverde's high shot count but low conversion rate indicates less effectiveness.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C08",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Eric Maxim Choupo-Moting has scored 9 goals from 26 shots, with a goals per shot ratio of 0.35 (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.85,
+        "confidence_history": [
+          0.85
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Choupo-Moting's high efficiency in scoring makes him one of the most effective players.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C09",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Granit Xhaka has scored 9 goals from 51 shots, with a goals per shot ratio of 0.18 (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.65,
+        "confidence_history": [
+          0.65
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Xhaka's performance is solid, but not as efficient as others in the top ranks.",
+        "depends_on": []
+      }
+    ],
+    "sweeps": [
+      {
+        "sweep": 1,
+        "filed": 8,
+        "admitted": 8,
+        "dropped": 0,
+        "revisions": 8,
+        "outcomes": [
+          {
+            "challenge_id": "X01",
+            "target_claim": "C01",
+            "challenger": "Current Form Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.75,
+            "post_confidence": 0.6789,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X02",
+            "target_claim": "C03",
+            "challenger": "Current Form Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.7,
+            "post_confidence": 0.6218,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X03",
+            "target_claim": "C04",
+            "challenger": "Current Form Analyst",
+            "kind": "inference_dispute",
+            "severity": "minor",
+            "response": "revise",
+            "pre_confidence": 0.65,
+            "post_confidence": 0.5669,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X04",
+            "target_claim": "C05",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.8,
+            "post_confidence": 0.7381,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X05",
+            "target_claim": "C06",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.7,
+            "post_confidence": 0.6218,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X06",
+            "target_claim": "C07",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.6,
+            "post_confidence": 0.5139,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X07",
+            "target_claim": "C08",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "minor",
+            "response": "revise",
+            "pre_confidence": 0.85,
+            "post_confidence": 0.7997,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X08",
+            "target_claim": "C09",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.65,
+            "post_confidence": 0.5669,
+            "status": "revised"
+          }
+        ]
+      }
+    ],
+    "cruxes": [
+      {
+        "action": "stable",
+        "reason": "pivotal but not further resolvable (carried as open cruxes)",
+        "cruxes": [
+          {
+            "crux_id": "K-C01",
+            "description": "C01 (Tactical Performance Analyst) is pivotal: While Anthony Martial has a goals per shot ratio of 0.22 and 9 goals scored, Eri",
+            "pivotal_claims": [
+              "C01"
+            ],
+            "decision_flips_if": "confidence in C01 moves outside [0.41, 0.86]",
+            "unresolved": true,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C02",
+            "description": "C02 (Tactical Performance Analyst) is pivotal: Eric Maxim Choupo-Moting has a remarkable goals per shot ratio of 0.35, scoring ",
+            "pivotal_claims": [
+              "C02"
+            ],
+            "decision_flips_if": "confidence in C02 moves outside [0.57, 0.92]",
+            "unresolved": false,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C03",
+            "description": "C03 (Tactical Performance Analyst) is pivotal: Granit Xhaka has scored 9 goals this season, but his goals per shot ratio of 0.1",
+            "pivotal_claims": [
+              "C03"
+            ],
+            "decision_flips_if": "confidence in C03 moves outside [0.35, 0.83]",
+            "unresolved": true,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C05",
+            "description": "C05 (Current Form Analyst) is pivotal: Anthony Martial has scored 9 goals from 37 shots, with a goals per shot ratio of",
+            "pivotal_claims": [
+              "C05"
+            ],
+            "decision_flips_if": "confidence in C05 moves outside [0.48, 0.89]",
+            "unresolved": false,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C06",
+            "description": "C06 (Current Form Analyst) is pivotal: Eddie Nketiah has scored 9 goals from 72 shots, with a goals per shot ratio of 0",
+            "pivotal_claims": [
+              "C06"
+            ],
+            "decision_flips_if": "confidence in C06 moves outside [0.35, 0.83]",
+            "unresolved": true,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C08",
+            "description": "C08 (Current Form Analyst) is pivotal: Eric Maxim Choupo-Moting has scored 9 goals from 26 shots, with a goals per shot",
+            "pivotal_claims": [
+              "C08"
+            ],
+            "decision_flips_if": "confidence in C08 moves outside [0.57, 0.92]",
+            "unresolved": false,
+            "retrieval_request": []
+          }
+        ]
+      }
+    ],
+    "evaluation": {
+      "passed": true,
+      "grounding_ok": true,
+      "calibration_ok": true,
+      "completeness_ok": true,
+      "failure": null,
+      "missing": [],
+      "notes": "every statement traces to a resolved, cited claim; confidence + dissent match the deterministic aggregation; blocking gaps were filled or surfaced as limitations",
+      "retries": 0
+    },
+    "contradictions": [],
+    "decision": {
+      "answer": "1. **Eric Maxim Choupo-Moting**  \n   **Grade:** 9.5  \n   **Statistics:** 9 goals from 26 shots (Goals per shot: 0.35)  \n   Choupo-Moting's high goals per shot ratio indicates exceptional attacking effectiveness, making him the most effective player this season.\n\n2. **Anthony Martial**  \n   **Grade:** 7.5  \n   **Statistics:** 9 goals from 37 shots (Goals per shot: 0.22)  \n   Martial's performance is solid, but his lower goals per shot ratio compared to Choupo-Moting reflects less efficiency in converting shots into goals.\n\n3. **Granit Xhaka**  \n   **Grade:** 6.0  \n   **Statistics:** 9 goals from 51 shots (Goals per shot: 0.18)  \n   Xhaka has the same number of goals as Martial but is less effective in terms of shot conversion, resulting in a lower grade.\n\n4. **Eddie Nketiah**  \n   **Grade:** 5.0  \n   **Statistics:** 9 goals from 72 shots (Goals per shot: 0.13)  \n   Nketiah's significantly lower goals per shot ratio indicates poor efficiency, placing him lower in effectiveness rankings.\n\n5. **Federico Valverde**  \n   **Grade:** 4.0  \n   **Statistics:** 9 goals from 98 shots (Goals per shot: 0.09)  \n   Valverde's very low goals per shot ratio highlights a lack of attacking effectiveness, making him the least effective player on this list.\n\n**Confidence:** The decision confidence is moderate at 0.6564, indicating a reasonable level of certainty in these rankings. There is no unresolved dissent.",
+      "confidence": 0.6564,
+      "confidence_kind": "judgmental",
+      "supporting_claims": [
+        "C02",
+        "C08",
+        "C05",
+        "C01",
+        "C03",
+        "C06",
+        "C04",
+        "C09",
+        "C07"
+      ],
+      "unresolved_dissent": [],
+      "open_cruxes": [
+        {
+          "crux_id": "K-C01",
+          "description": "C01 (Tactical Performance Analyst) is pivotal: While Anthony Martial has a goals per shot ratio of 0.22 and 9 goals scored, Eri",
+          "pivotal_claims": [
+            "C01"
+          ],
+          "decision_flips_if": "confidence in C01 moves outside [0.41, 0.86]",
+          "unresolved": true,
+          "retrieval_request": []
+        },
+        {
+          "crux_id": "K-C03",
+          "description": "C03 (Tactical Performance Analyst) is pivotal: Granit Xhaka has scored 9 goals this season, but his goals per shot ratio of 0.1",
+          "pivotal_claims": [
+            "C03"
+          ],
+          "decision_flips_if": "confidence in C03 moves outside [0.35, 0.83]",
+          "unresolved": true,
+          "retrieval_request": []
+        },
+        {
+          "crux_id": "K-C06",
+          "description": "C06 (Current Form Analyst) is pivotal: Eddie Nketiah has scored 9 goals from 72 shots, with a goals per shot ratio of 0",
+          "pivotal_claims": [
+            "C06"
+          ],
+          "decision_flips_if": "confidence in C06 moves outside [0.35, 0.83]",
+          "unresolved": true,
+          "retrieval_request": []
+        }
+      ],
+      "citations": [
+        "E02"
+      ]
+    },
+    "evidence": [
+      {
+        "id": "E01",
+        "source_tool": "mcp:football-analytics.query_data",
+        "args_hash": "97d3ecfa02e18074",
+        "args": {
+          "request": {
+            "dataset": "squad_standard_stats",
+            "limit": 100,
+            "order_by": "goals_assists",
+            "order_direction": "desc",
+            "select": [
+              "name",
+              "goals",
+              "assists",
+              "goals_per90",
+              "minutes_90s"
+            ]
+          }
+        },
+        "payload": [
+          {
+            "name": "Juan Hern\u00e1ndez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Arijon Ibrahimovi\u0107",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "\u00c1lex Valle",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Diego Kochen",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "I\u00f1aki Pe\u00f1a",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Guillermo Fernandez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Landry Farr\u00e9",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Noah Darvich",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Harry Amass",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Daniel Rodriguez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Ander Astralaga",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Eder Aller",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Diego Kochen",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Aleix Garrido",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Estanis",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "\u00c1ron Yaakobishvili",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Lazar Carevi\u0107",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "I\u00f1aki Pe\u00f1a",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Mikayil Ngor Faye",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "\u00c1lvaro Cort\u00e9s",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Unai Hernandez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Pau Prim",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Guillermo Fernandez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Charles Sagoe Jr",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Arnau Comas",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Ilias Akhomach",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "\u00c1ngel Alarc\u00f3n",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Jakub Kiwior",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Ceadach O'Neill",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Ander Astralaga",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Arnau Tenas",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Jandro Orellana",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Ander Astralaga",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Omari Hutchinson",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Zak Swanson",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Arthur Okonkwo",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Marcelo Flores",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Zach Awe",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Mika Biereth",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Daniel Rodriguez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "\u00c1ron Yaakobishvili",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Alexis Olmedo",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Zane Monlouis",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Jimi Gower",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Pau Victor",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Pau Prim",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Unai Hernandez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Guillem Jaime",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Jack Porter",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Josh Nichols",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Aaron Ramsdale",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Michal Rosiak",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Bradley Ibrahim",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Lucas De Vega",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Miralem Pjani\u0107",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Miralem Pjani\u0107",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Karl Jakob Hein",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Rob Holding",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Salah Oulad M'Hand",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Matt Turner",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Mazeed Ogungbo",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Alexei Rojas",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Alex Kirk",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Jack Henry-Francis",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "H\u00e9ctor Beller\u00edn",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Reuell Walters",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Miguel Azeez",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Ayden Heaven",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Nicolas P\u00e9p\u00e9",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Reuell Walters",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Amario Cozier-Duberry",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Lino Sousa",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Mauro Bandeira",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Nathan Butler-Oyedeji",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Matthew Smith",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "James Hillson",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "C\u0103t\u0103lin C\u00eerjan",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Khayon Edwards",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Charles Sagoe Jr",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Bradley Ibrahim",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Ryan Alebiosu",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Louie Copley",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Harrison Dudziak",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Diego Kochen",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Brayden Clarke",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "\u00c1lex Valle",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Alexei Rojas",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Myles Lewis-Skelly",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "James Sweet",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Salah Oulad M'Hand",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Marc Guiu",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Eddie Nketiah",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Josh Robinson",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Khari Ranson",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Karl Jakob Hein",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Rey Manaj",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Lino Sousa",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Amario Cozier-Duberry",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Mauro Bandeira",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          },
+          {
+            "name": "Nicolas Feldhahn",
+            "goals": null,
+            "assists": null,
+            "goals_per90": null,
+            "minutes_90s": null
+          }
+        ],
+        "retrieved_at": 1781456011.4272246,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "player output"
+        ],
+        "is_empty": false,
+        "is_negative_result": false
+      },
+      {
+        "id": "E02",
+        "source_tool": "mcp:football-analytics.query_data",
+        "args_hash": "86104d34744c1d26",
+        "args": {
+          "request": {
+            "dataset": "squad_shooting",
+            "limit": 100,
+            "order_by": "goals",
+            "order_direction": "desc",
+            "select": [
+              "player_name",
+              "goals",
+              "shots",
+              "shots_on_target",
+              "shots_on_target_pct",
+              "goals_per_shot"
+            ]
+          }
+        },
+        "payload": [
+          {
+            "player_name": "Anthony Martial",
+            "goals": "9",
+            "shots": "37",
+            "shots_on_target": "19",
+            "shots_on_target_pct": "51.4",
+            "goals_per_shot": "0.22"
+          },
+          {
+            "player_name": "Eddie Nketiah",
+            "goals": "9",
+            "shots": "72",
+            "shots_on_target": "24",
+            "shots_on_target_pct": "33.3",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Federico Valverde",
+            "goals": "9",
+            "shots": "98",
+            "shots_on_target": "31",
+            "shots_on_target_pct": "31.6",
+            "goals_per_shot": "0.09"
+          },
+          {
+            "player_name": "Federico Valverde",
+            "goals": "9",
+            "shots": "84",
+            "shots_on_target": "29",
+            "shots_on_target_pct": "34.5",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Maximilian Beier",
+            "goals": "9",
+            "shots": "57",
+            "shots_on_target": "21",
+            "shots_on_target_pct": "36.8",
+            "goals_per_shot": "0.16"
+          },
+          {
+            "player_name": "Lennart Karl",
+            "goals": "9",
+            "shots": "65",
+            "shots_on_target": "31",
+            "shots_on_target_pct": "47.7",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Granit Xhaka",
+            "goals": "9",
+            "shots": "51",
+            "shots_on_target": "20",
+            "shots_on_target_pct": "39.2",
+            "goals_per_shot": "0.18"
+          },
+          {
+            "player_name": "Eric Maxim Choupo-Moting",
+            "goals": "9",
+            "shots": "26",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "57.7",
+            "goals_per_shot": "0.35"
+          },
+          {
+            "player_name": "Declan Rice",
+            "goals": "9",
+            "shots": "70",
+            "shots_on_target": "24",
+            "shots_on_target_pct": "34.3",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Randal Kolo Muani",
+            "goals": "9",
+            "shots": "35",
+            "shots_on_target": "17",
+            "shots_on_target_pct": "48.6",
+            "goals_per_shot": "0.26"
+          },
+          {
+            "player_name": "Casemiro",
+            "goals": "9",
+            "shots": "52",
+            "shots_on_target": "18",
+            "shots_on_target_pct": "34.6",
+            "goals_per_shot": "0.17"
+          },
+          {
+            "player_name": "Kingsley Coman",
+            "goals": "9",
+            "shots": "66",
+            "shots_on_target": "25",
+            "shots_on_target_pct": "37.9",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Donyell Malen",
+            "goals": "9",
+            "shots": "66",
+            "shots_on_target": "30",
+            "shots_on_target_pct": "45.5",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Marco Reus",
+            "goals": "9",
+            "shots": "66",
+            "shots_on_target": "30",
+            "shots_on_target_pct": "45.5",
+            "goals_per_shot": "0.12"
+          },
+          {
+            "player_name": "S\u00e9bastien Haller",
+            "goals": "9",
+            "shots": "39",
+            "shots_on_target": "20",
+            "shots_on_target_pct": "51.3",
+            "goals_per_shot": "0.23"
+          },
+          {
+            "player_name": "Rodrygo",
+            "goals": "9",
+            "shots": "65",
+            "shots_on_target": "26",
+            "shots_on_target_pct": "40.0",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Nico O\u2019Reilly",
+            "goals": "9",
+            "shots": "61",
+            "shots_on_target": "30",
+            "shots_on_target_pct": "49.2",
+            "goals_per_shot": "0.15"
+          },
+          {
+            "player_name": "Ethan Nwaneri",
+            "goals": "9",
+            "shots": "43",
+            "shots_on_target": "20",
+            "shots_on_target_pct": "46.5",
+            "goals_per_shot": "0.21"
+          },
+          {
+            "player_name": "Rodri",
+            "goals": "9",
+            "shots": "84",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "32.1",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Vitinha",
+            "goals": "9",
+            "shots": "71",
+            "shots_on_target": "25",
+            "shots_on_target_pct": "35.2",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Mikel Merino",
+            "goals": "9",
+            "shots": "53",
+            "shots_on_target": "23",
+            "shots_on_target_pct": "43.4",
+            "goals_per_shot": "0.17"
+          },
+          {
+            "player_name": "Federico Valverde",
+            "goals": "9",
+            "shots": "70",
+            "shots_on_target": "29",
+            "shots_on_target_pct": "41.4",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Achraf Hakimi",
+            "goals": "9",
+            "shots": "80",
+            "shots_on_target": "33",
+            "shots_on_target_pct": "41.3",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Karim Adeyemi",
+            "goals": "9",
+            "shots": "52",
+            "shots_on_target": "19",
+            "shots_on_target_pct": "36.5",
+            "goals_per_shot": "0.17"
+          },
+          {
+            "player_name": "Julian Brandt",
+            "goals": "9",
+            "shots": "39",
+            "shots_on_target": "16",
+            "shots_on_target_pct": "41.0",
+            "goals_per_shot": "0.23"
+          },
+          {
+            "player_name": "Bruno Fernandes",
+            "goals": "9",
+            "shots": "90",
+            "shots_on_target": "26",
+            "shots_on_target_pct": "28.9",
+            "goals_per_shot": "0.06"
+          },
+          {
+            "player_name": "Jude Bellingham",
+            "goals": "8",
+            "shots": "68",
+            "shots_on_target": "30",
+            "shots_on_target_pct": "44.1",
+            "goals_per_shot": "0.12"
+          },
+          {
+            "player_name": "Omar Marmoush",
+            "goals": "8",
+            "shots": "52",
+            "shots_on_target": "19",
+            "shots_on_target_pct": "36.5",
+            "goals_per_shot": "0.15"
+          },
+          {
+            "player_name": "Antony",
+            "goals": "8",
+            "shots": "122",
+            "shots_on_target": "47",
+            "shots_on_target_pct": "38.5",
+            "goals_per_shot": "0.07"
+          },
+          {
+            "player_name": "Ousmane Demb\u00e9l\u00e9",
+            "goals": "8",
+            "shots": "74",
+            "shots_on_target": "29",
+            "shots_on_target_pct": "39.2",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Marco Reus",
+            "goals": "8",
+            "shots": "45",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "33.3",
+            "goals_per_shot": "0.16"
+          },
+          {
+            "player_name": "Thomas M\u00fcller",
+            "goals": "8",
+            "shots": "65",
+            "shots_on_target": "32",
+            "shots_on_target_pct": "49.2",
+            "goals_per_shot": "0.12"
+          },
+          {
+            "player_name": "Gonzalo Garc\u00eda",
+            "goals": "8",
+            "shots": "29",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "51.7",
+            "goals_per_shot": "0.28"
+          },
+          {
+            "player_name": "Kingsley Coman",
+            "goals": "8",
+            "shots": "70",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "38.6",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Omar Marmoush",
+            "goals": "8",
+            "shots": "65",
+            "shots_on_target": "24",
+            "shots_on_target_pct": "36.9",
+            "goals_per_shot": "0.12"
+          },
+          {
+            "player_name": "Jeremy Doku",
+            "goals": "8",
+            "shots": "60",
+            "shots_on_target": "20",
+            "shots_on_target_pct": "33.3",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Fermin L\u00f3pez",
+            "goals": "8",
+            "shots": "64",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "42.2",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Gabriel Jesus",
+            "goals": "8",
+            "shots": "70",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "38.6",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Jamal Musiala",
+            "goals": "8",
+            "shots": "55",
+            "shots_on_target": "23",
+            "shots_on_target_pct": "41.8",
+            "goals_per_shot": "0.15"
+          },
+          {
+            "player_name": "Marcus Rashford",
+            "goals": "8",
+            "shots": "85",
+            "shots_on_target": "29",
+            "shots_on_target_pct": "34.1",
+            "goals_per_shot": "0.07"
+          },
+          {
+            "player_name": "Gabriel Martinelli",
+            "goals": "8",
+            "shots": "70",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "38.6",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Dani Olmo",
+            "goals": "8",
+            "shots": "94",
+            "shots_on_target": "28",
+            "shots_on_target_pct": "29.8",
+            "goals_per_shot": "0.09"
+          },
+          {
+            "player_name": "Leandro Trossard",
+            "goals": "8",
+            "shots": "81",
+            "shots_on_target": "23",
+            "shots_on_target_pct": "28.4",
+            "goals_per_shot": "0.10"
+          },
+          {
+            "player_name": "Noni Madueke",
+            "goals": "8",
+            "shots": "56",
+            "shots_on_target": "23",
+            "shots_on_target_pct": "41.1",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Declan Rice",
+            "goals": "7",
+            "shots": "64",
+            "shots_on_target": "21",
+            "shots_on_target_pct": "32.8",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Youssoufa Moukoko",
+            "goals": "7",
+            "shots": "50",
+            "shots_on_target": "26",
+            "shots_on_target_pct": "52.0",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Gio Reyna",
+            "goals": "7",
+            "shots": "30",
+            "shots_on_target": "13",
+            "shots_on_target_pct": "43.3",
+            "goals_per_shot": "0.20"
+          },
+          {
+            "player_name": "Marcus Rashford",
+            "goals": "7",
+            "shots": "37",
+            "shots_on_target": "14",
+            "shots_on_target_pct": "37.8",
+            "goals_per_shot": "0.19"
+          },
+          {
+            "player_name": "Joshua Zirkzee",
+            "goals": "7",
+            "shots": "54",
+            "shots_on_target": "21",
+            "shots_on_target_pct": "38.9",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Ferr\u00e1n Torres",
+            "goals": "7",
+            "shots": "50",
+            "shots_on_target": "17",
+            "shots_on_target_pct": "34.0",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Bernardo Silva",
+            "goals": "7",
+            "shots": "35",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "42.9",
+            "goals_per_shot": "0.20"
+          },
+          {
+            "player_name": "Thomas M\u00fcller",
+            "goals": "7",
+            "shots": "45",
+            "shots_on_target": "17",
+            "shots_on_target_pct": "37.8",
+            "goals_per_shot": "0.16"
+          },
+          {
+            "player_name": "Mateo Kova\u010di\u0107",
+            "goals": "7",
+            "shots": "51",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "29.4",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Gabriel Jesus",
+            "goals": "7",
+            "shots": "41",
+            "shots_on_target": "19",
+            "shots_on_target_pct": "46.3",
+            "goals_per_shot": "0.17"
+          },
+          {
+            "player_name": "Jadon Sancho",
+            "goals": "7",
+            "shots": "34",
+            "shots_on_target": "14",
+            "shots_on_target_pct": "41.2",
+            "goals_per_shot": "0.21"
+          },
+          {
+            "player_name": "Lamine Yamal",
+            "goals": "7",
+            "shots": "85",
+            "shots_on_target": "26",
+            "shots_on_target_pct": "30.6",
+            "goals_per_shot": "0.08"
+          },
+          {
+            "player_name": "Ramy Bensebaini",
+            "goals": "7",
+            "shots": "21",
+            "shots_on_target": "9",
+            "shots_on_target_pct": "42.9",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Joshua Kimmich",
+            "goals": "7",
+            "shots": "58",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "46.6",
+            "goals_per_shot": "0.09"
+          },
+          {
+            "player_name": "Benjamin Pavard",
+            "goals": "7",
+            "shots": "45",
+            "shots_on_target": "16",
+            "shots_on_target_pct": "35.6",
+            "goals_per_shot": "0.16"
+          },
+          {
+            "player_name": "Casemiro",
+            "goals": "7",
+            "shots": "71",
+            "shots_on_target": "25",
+            "shots_on_target_pct": "35.2",
+            "goals_per_shot": "0.10"
+          },
+          {
+            "player_name": "Martin \u00d8degaard",
+            "goals": "7",
+            "shots": "56",
+            "shots_on_target": "22",
+            "shots_on_target_pct": "39.3",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Rodri",
+            "goals": "7",
+            "shots": "55",
+            "shots_on_target": "16",
+            "shots_on_target_pct": "29.1",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Endrick",
+            "goals": "7",
+            "shots": "50",
+            "shots_on_target": "21",
+            "shots_on_target_pct": "42.0",
+            "goals_per_shot": "0.14"
+          },
+          {
+            "player_name": "Kingsley Coman",
+            "goals": "7",
+            "shots": "67",
+            "shots_on_target": "25",
+            "shots_on_target_pct": "37.3",
+            "goals_per_shot": "0.10"
+          },
+          {
+            "player_name": "Luuk de Jong",
+            "goals": "7",
+            "shots": "38",
+            "shots_on_target": "16",
+            "shots_on_target_pct": "42.1",
+            "goals_per_shot": "0.18"
+          },
+          {
+            "player_name": "\u00c9der Milit\u00e3o",
+            "goals": "7",
+            "shots": "32",
+            "shots_on_target": "12",
+            "shots_on_target_pct": "37.5",
+            "goals_per_shot": "0.22"
+          },
+          {
+            "player_name": "James Mcatee",
+            "goals": "7",
+            "shots": "27",
+            "shots_on_target": "9",
+            "shots_on_target_pct": "33.3",
+            "goals_per_shot": "0.26"
+          },
+          {
+            "player_name": "Pierre-Emerick Aubameyang",
+            "goals": "7",
+            "shots": "39",
+            "shots_on_target": "22",
+            "shots_on_target_pct": "56.4",
+            "goals_per_shot": "0.18"
+          },
+          {
+            "player_name": "Khvicha Kvaratskhelia",
+            "goals": "7",
+            "shots": "68",
+            "shots_on_target": "24",
+            "shots_on_target_pct": "35.3",
+            "goals_per_shot": "0.10"
+          },
+          {
+            "player_name": "Vitinha",
+            "goals": "7",
+            "shots": "78",
+            "shots_on_target": "25",
+            "shots_on_target_pct": "32.1",
+            "goals_per_shot": "0.08"
+          },
+          {
+            "player_name": "Ferr\u00e1n Torres",
+            "goals": "7",
+            "shots": "72",
+            "shots_on_target": "24",
+            "shots_on_target_pct": "33.3",
+            "goals_per_shot": "0.07"
+          },
+          {
+            "player_name": "Pedri",
+            "goals": "7",
+            "shots": "33",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "45.5",
+            "goals_per_shot": "0.21"
+          },
+          {
+            "player_name": "Jo\u00e3o Neves",
+            "goals": "7",
+            "shots": "46",
+            "shots_on_target": "16",
+            "shots_on_target_pct": "34.8",
+            "goals_per_shot": "0.15"
+          },
+          {
+            "player_name": "Tijjani Reijnders",
+            "goals": "7",
+            "shots": "92",
+            "shots_on_target": "29",
+            "shots_on_target_pct": "31.5",
+            "goals_per_shot": "0.08"
+          },
+          {
+            "player_name": "Vitinha",
+            "goals": "7",
+            "shots": "54",
+            "shots_on_target": "23",
+            "shots_on_target_pct": "42.6",
+            "goals_per_shot": "0.07"
+          },
+          {
+            "player_name": "Serge Gnabry",
+            "goals": "7",
+            "shots": "69",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "39.1",
+            "goals_per_shot": "0.10"
+          },
+          {
+            "player_name": "Harry Kane",
+            "goals": "61",
+            "shots": "197",
+            "shots_on_target": "115",
+            "shots_on_target_pct": "58.4",
+            "goals_per_shot": "0.22"
+          },
+          {
+            "player_name": "Jo\u0161ko Gvardiol",
+            "goals": "6",
+            "shots": "49",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "30.6",
+            "goals_per_shot": "0.12"
+          },
+          {
+            "player_name": "Jeremy Doku",
+            "goals": "6",
+            "shots": "82",
+            "shots_on_target": "32",
+            "shots_on_target_pct": "39.0",
+            "goals_per_shot": "0.07"
+          },
+          {
+            "player_name": "Marcel Sabitzer",
+            "goals": "6",
+            "shots": "65",
+            "shots_on_target": "30",
+            "shots_on_target_pct": "46.2",
+            "goals_per_shot": "0.08"
+          },
+          {
+            "player_name": "Kevin De Bruyne",
+            "goals": "6",
+            "shots": "67",
+            "shots_on_target": "25",
+            "shots_on_target_pct": "37.3",
+            "goals_per_shot": "0.09"
+          },
+          {
+            "player_name": "Ousmane Demb\u00e9l\u00e9",
+            "goals": "6",
+            "shots": "88",
+            "shots_on_target": "28",
+            "shots_on_target_pct": "31.8",
+            "goals_per_shot": "0.07"
+          },
+          {
+            "player_name": "Gabriel Martinelli",
+            "goals": "6",
+            "shots": "57",
+            "shots_on_target": "17",
+            "shots_on_target_pct": "29.8",
+            "goals_per_shot": "0.09"
+          },
+          {
+            "player_name": "Carlos Soler",
+            "goals": "6",
+            "shots": "14",
+            "shots_on_target": "9",
+            "shots_on_target_pct": "64.3",
+            "goals_per_shot": "0.43"
+          },
+          {
+            "player_name": "Kai Havertz",
+            "goals": "6",
+            "shots": "28",
+            "shots_on_target": "10",
+            "shots_on_target_pct": "35.7",
+            "goals_per_shot": "0.18"
+          },
+          {
+            "player_name": "Gabriel Jesus",
+            "goals": "6",
+            "shots": "39",
+            "shots_on_target": "21",
+            "shots_on_target_pct": "53.8",
+            "goals_per_shot": "0.15"
+          },
+          {
+            "player_name": "Mikel Merino",
+            "goals": "6",
+            "shots": "34",
+            "shots_on_target": "14",
+            "shots_on_target_pct": "41.2",
+            "goals_per_shot": "0.18"
+          },
+          {
+            "player_name": "Leon Goretzka",
+            "goals": "6",
+            "shots": "68",
+            "shots_on_target": "16",
+            "shots_on_target_pct": "23.5",
+            "goals_per_shot": "0.09"
+          },
+          {
+            "player_name": "Rapha\u00ebl Guerreiro",
+            "goals": "6",
+            "shots": "40",
+            "shots_on_target": "18",
+            "shots_on_target_pct": "45.0",
+            "goals_per_shot": "0.15"
+          },
+          {
+            "player_name": "Thorgan Hazard",
+            "goals": "6",
+            "shots": "32",
+            "shots_on_target": "10",
+            "shots_on_target_pct": "31.3",
+            "goals_per_shot": "0.19"
+          },
+          {
+            "player_name": "Lee Kang-in",
+            "goals": "6",
+            "shots": "56",
+            "shots_on_target": "22",
+            "shots_on_target_pct": "39.3",
+            "goals_per_shot": "0.11"
+          },
+          {
+            "player_name": "Pedri",
+            "goals": "6",
+            "shots": "38",
+            "shots_on_target": "15",
+            "shots_on_target_pct": "39.5",
+            "goals_per_shot": "0.16"
+          },
+          {
+            "player_name": "Martin \u00d8degaard",
+            "goals": "6",
+            "shots": "68",
+            "shots_on_target": "22",
+            "shots_on_target_pct": "32.4",
+            "goals_per_shot": "0.07"
+          },
+          {
+            "player_name": "Leon Goretzka",
+            "goals": "6",
+            "shots": "61",
+            "shots_on_target": "21",
+            "shots_on_target_pct": "34.4",
+            "goals_per_shot": "0.10"
+          },
+          {
+            "player_name": "Alexandre Lacazette",
+            "goals": "6",
+            "shots": "54",
+            "shots_on_target": "19",
+            "shots_on_target_pct": "35.2",
+            "goals_per_shot": "0.06"
+          },
+          {
+            "player_name": "Jude Bellingham",
+            "goals": "6",
+            "shots": "71",
+            "shots_on_target": "21",
+            "shots_on_target_pct": "29.6",
+            "goals_per_shot": "0.08"
+          },
+          {
+            "player_name": "Fred",
+            "goals": "6",
+            "shots": "47",
+            "shots_on_target": "12",
+            "shots_on_target_pct": "25.5",
+            "goals_per_shot": "0.13"
+          },
+          {
+            "player_name": "Rapha\u00ebl Guerreiro",
+            "goals": "6",
+            "shots": "19",
+            "shots_on_target": "9",
+            "shots_on_target_pct": "47.4",
+            "goals_per_shot": "0.32"
+          },
+          {
+            "player_name": "Mason Greenwood",
+            "goals": "6",
+            "shots": "58",
+            "shots_on_target": "27",
+            "shots_on_target_pct": "46.6",
+            "goals_per_shot": "0.10"
+          },
+          {
+            "player_name": "Mart\u00edn Zubimendi",
+            "goals": "6",
+            "shots": "33",
+            "shots_on_target": "11",
+            "shots_on_target_pct": "33.3",
+            "goals_per_shot": "0.18"
+          }
+        ],
+        "retrieved_at": 1781456011.4786777,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "attacking effectiveness"
+        ],
+        "is_empty": false,
+        "is_negative_result": false
+      },
+      {
+        "id": "E03",
+        "source_tool": "mcp:football-analytics.query_data",
+        "args_hash": "79d259793348f84a",
+        "args": {
+          "request": {
+            "dataset": "squad_playing_time",
+            "limit": 100,
+            "order_by": "minutes",
+            "order_direction": "desc",
+            "select": [
+              "player",
+              "games",
+              "minutes",
+              "minutes_90s",
+              "games_starts"
+            ]
+          }
+        },
+        "payload": [
+          {
+            "player": "Guillermo Fernandez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Arijon Ibrahimovi\u0107",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Diego Kochen",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Daniel Rodriguez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Eder Aller",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "I\u00f1aki Pe\u00f1a",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "\u00c1ron Yaakobishvili",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "I\u00f1aki Pe\u00f1a",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Noah Darvich",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "\u00c1lvaro Cort\u00e9s",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Alexis Olmedo",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "\u00c1lex Valle",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Juan Hern\u00e1ndez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Pau Victor",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Ander Astralaga",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Diego Kochen",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Alexei Rojas",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Matt Turner",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Guillermo Fernandez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Mikayil Ngor Faye",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Ander Astralaga",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Miralem Pjani\u0107",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Landry Farr\u00e9",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Pau Prim",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Daniel Rodriguez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Jandro Orellana",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "\u00c1ron Yaakobishvili",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Miralem Pjani\u0107",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Unai Hernandez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Guillem Jaime",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Lucas De Vega",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Lazar Carevi\u0107",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "\u00c1ngel Alarc\u00f3n",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Omari Hutchinson",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Zak Swanson",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Arthur Okonkwo",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Marcelo Flores",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Zach Awe",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Mika Biereth",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Marc Guiu",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Rey Manaj",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Ilias Akhomach",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Aleix Garrido",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Diego Kochen",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Charles Sagoe Jr",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "\u00c1lex Valle",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Eddie Nketiah",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Ander Astralaga",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Jimi Gower",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Brayden Clarke",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Louie Copley",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Karl Jakob Hein",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Reuell Walters",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Ayden Heaven",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Bradley Ibrahim",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Arnau Tenas",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Karl Jakob Hein",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Zane Monlouis",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Salah Oulad M'Hand",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Estanis",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Mazeed Ogungbo",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Amario Cozier-Duberry",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Alex Kirk",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Aaron Ramsdale",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "H\u00e9ctor Beller\u00edn",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Michal Rosiak",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Miguel Azeez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Khari Ranson",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Nicolas P\u00e9p\u00e9",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Reuell Walters",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Amario Cozier-Duberry",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Lino Sousa",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Mauro Bandeira",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Nathan Butler-Oyedeji",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Matthew Smith",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "James Hillson",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "C\u0103t\u0103lin C\u00eerjan",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Khayon Edwards",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Charles Sagoe Jr",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Bradley Ibrahim",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Ryan Alebiosu",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Arnau Tenas",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": "0.0",
+            "games_starts": "0"
+          },
+          {
+            "player": "Alexei Rojas",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Harrison Dudziak",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Jakub Kiwior",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Josh Nichols",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Arnau Comas",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Jack Porter",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Josh Robinson",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Pau Prim",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Ceadach O'Neill",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Mauro Bandeira",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Lino Sousa",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "James Sweet",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Rob Holding",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Myles Lewis-Skelly",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Unai Hernandez",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Salah Oulad M'Hand",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Jack Henry-Francis",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          },
+          {
+            "player": "Nicolas Feldhahn",
+            "games": "0",
+            "minutes": null,
+            "minutes_90s": null,
+            "games_starts": "0"
+          }
+        ],
+        "retrieved_at": 1781456011.5359259,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "playing time"
+        ],
+        "is_empty": false,
+        "is_negative_result": false
+      }
+    ],
+    "ledgerClaims": [
+      {
+        "claim_id": "C01",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 2,
+        "assertion": "While Anthony Martial has a goals per shot ratio of 0.22 and 9 goals scored, Eric Maxim Choupo-Moting's higher goals per shot ratio of 0.35 indicates he is more efficient in converting shots into goals, suggesting Martial's effectiveness is not among the top in comparison to Choupo-Moting (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.6789,
+        "confidence_history": [
+          0.75,
+          0.6789
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Anthony Martial is among the top effective players this season, with a high goals per shot ratio of 0.22 and 9 goals scored (E02).",
+            "confidence": 0.75
+          }
+        ],
+        "rationale": "The revision acknowledges Choupo-Moting's superior efficiency, which undermines the claim of Martial being among the top effective players without qualification.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C02",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Eric Maxim Choupo-Moting has a remarkable goals per shot ratio of 0.35, scoring 9 goals from only 26 shots, making him one of the most effective players this season (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.8,
+        "confidence_history": [
+          0.8
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [],
+        "rationale": "His high conversion rate suggests he is a key attacking asset.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C03",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 2,
+        "assertion": "Granit Xhaka has scored 9 goals this season, but his goals per shot ratio of 0.18 suggests he is less effective in converting shots into goals compared to some peers (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.6218,
+        "confidence_history": [
+          0.7,
+          0.6218
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Granit Xhaka has scored 9 goals with a goals per shot ratio of 0.18, indicating solid attacking output this season (E02).",
+            "confidence": 0.7
+          }
+        ],
+        "rationale": "The initial claim overstated Xhaka's attacking output by not addressing the implications of his lower goals per shot ratio, which indicates less efficiency in converting shots into goals.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C04",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 2,
+        "assertion": "Eddie Nketiah has 9 goals but a goals per shot ratio of 0.13, which is lower than several players with the same goal count, such as Anthony Martial (0.22) and Eric Maxim Choupo-Moting (0.35), indicating he is less efficient in converting shots into goals (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.5669,
+        "confidence_history": [
+          0.65,
+          0.5669
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Eddie Nketiah, despite having 9 goals, has a lower goals per shot ratio of 0.13, suggesting less efficiency compared to other top players (E02).",
+            "confidence": 0.65
+          }
+        ],
+        "rationale": "The revised claim provides a comparative analysis with other players who have the same goal count, addressing the challenge's concern about the lack of context for Nketiah's efficiency.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C05",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 2,
+        "assertion": "Anthony Martial has scored 9 goals from 37 shots, with a goals per shot ratio of 0.22, which is lower than some peers like Eric Maxim Choupo-Moting (0.35) and Randal Kolo Muani (0.26) (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.7381,
+        "confidence_history": [
+          0.8,
+          0.7381
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Anthony Martial has scored 9 goals from 37 shots, with a goals per shot ratio of 0.22 (E02).",
+            "confidence": 0.8
+          }
+        ],
+        "rationale": "While Martial's goal tally is decent, his goals per shot ratio indicates he is less effective compared to some other players, which aligns with the challenge's assertion.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C06",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 2,
+        "assertion": "Eddie Nketiah has scored 9 goals from 72 shots, with a goals per shot ratio of 0.13, indicating a lower scoring efficiency compared to some peers (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.6218,
+        "confidence_history": [
+          0.7,
+          0.6218
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Eddie Nketiah has scored 9 goals from 72 shots, with a goals per shot ratio of 0.13 (E02).",
+            "confidence": 0.7
+          }
+        ],
+        "rationale": "The original claim did not account for the context of Nketiah's goals per shot ratio, which is relatively low compared to other players, suggesting he may not be as effective as initially implied.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C07",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 2,
+        "assertion": "Federico Valverde has scored 9 goals from 98 shots, with a goals per shot ratio of 0.09, indicating a lower scoring efficiency compared to some peers (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.5139,
+        "confidence_history": [
+          0.6,
+          0.5139
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Federico Valverde has scored 9 goals from 98 shots, with a goals per shot ratio of 0.09 (E02).",
+            "confidence": 0.6
+          }
+        ],
+        "rationale": "The original claim did not account for the context of scoring efficiency, which is indeed low for Valverde compared to other players with similar goal tallies.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C08",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 2,
+        "assertion": "Eric Maxim Choupo-Moting has scored 9 goals from 26 shots, with a goals per shot ratio of 0.35, which is higher than several players with the same number of goals, such as Anthony Martial (0.22) and Eddie Nketiah (0.13) (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.7997,
+        "confidence_history": [
+          0.85,
+          0.7997
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Eric Maxim Choupo-Moting has scored 9 goals from 26 shots, with a goals per shot ratio of 0.35 (E02).",
+            "confidence": 0.85
+          }
+        ],
+        "rationale": "The revision provides context by comparing Choupo-Moting's goals per shot ratio to other players, addressing the challenge's concern about misleading effectiveness.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C09",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 2,
+        "assertion": "Granit Xhaka has scored 9 goals from 51 shots, with a goals per shot ratio of 0.18, which is below the average for effective scorers in his position (E02).",
+        "evidence_ids": [
+          "E02"
+        ],
+        "confidence": 0.5669,
+        "confidence_history": [
+          0.65,
+          0.5669
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Granit Xhaka has scored 9 goals from 51 shots, with a goals per shot ratio of 0.18 (E02).",
+            "confidence": 0.65
+          }
+        ],
+        "rationale": "While Xhaka has scored 9 goals, his goals per shot ratio of 0.18 indicates he is less effective compared to other players, suggesting a need for qualification in the original claim.",
+        "depends_on": []
+      }
+    ],
+    "challenges": [
+      {
+        "challenge_id": "X01",
+        "target_claim": "C01",
+        "challenger": "Current Form Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "The claim does not consider the goals per shot ratio in relation to the number of shots taken, which is crucial for evaluating effectiveness. Martial's 0.22 ratio is lower than Choupo-Moting's 0.35, indicating he is less effective despite having the same number of goals.",
+        "severity": "major",
+        "rationale": "Choupo-Moting's higher goals per shot ratio suggests he is more efficient in converting shots into goals compared to Martial, which undermines the claim of Martial being among the top effective players.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X02",
+        "target_claim": "C03",
+        "challenger": "Current Form Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "The claim states Xhaka has solid attacking output based solely on goals scored, without considering his lower goals per shot ratio of 0.18 compared to other players like Choupo-Moting and Martial.",
+        "severity": "major",
+        "rationale": "Xhaka's lower goals per shot ratio indicates he is less effective in converting shots into goals, which contradicts the assertion of solid attacking output.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X03",
+        "target_claim": "C04",
+        "challenger": "Current Form Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "The claim suggests Nketiah's lower goals per shot ratio of 0.13 indicates less efficiency, but does not contextualize this against the overall effectiveness of other players with similar goal counts.",
+        "severity": "minor",
+        "rationale": "While Nketiah's ratio is indeed lower, the claim does not provide a comparative analysis with other players who have similar goal counts, which is necessary to substantiate the assertion of 'less efficiency'.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X04",
+        "target_claim": "C05",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "The goals per shot ratio of 0.22 is below average for effective strikers, indicating Martial's scoring efficiency is not particularly high compared to others in the same context.",
+        "severity": "major",
+        "rationale": "Martial's goals per shot ratio of 0.22 suggests he is less effective in converting chances compared to other players, which undermines the claim of him being among the top effective players this season (E02).",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X05",
+        "target_claim": "C06",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Nketiah's goals per shot ratio of 0.13 is significantly low, indicating poor finishing ability relative to his shot volume.",
+        "severity": "major",
+        "rationale": "Nketiah's goals per shot ratio of 0.13 suggests he is not an effective scorer, which contradicts the claim of him being a top effective player (E02).",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X06",
+        "target_claim": "C07",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Valverde's goals per shot ratio of 0.09 is extremely low, indicating he is not an effective scorer despite the number of goals.",
+        "severity": "major",
+        "rationale": "Valverde's goals per shot ratio of 0.09 indicates a lack of scoring efficiency, which contradicts the claim of him being among the top effective players (E02).",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X07",
+        "target_claim": "C08",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Choupo-Moting's goals per shot ratio of 0.35 is significantly higher than average, suggesting he is more effective than the claim implies.",
+        "severity": "minor",
+        "rationale": "While Choupo-Moting has a high goals per shot ratio of 0.35, the claim does not contextualize this against other players, which could mislead about his overall effectiveness (E02).",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X08",
+        "target_claim": "C09",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Xhaka's goals per shot ratio of 0.18 is below average for effective strikers, indicating he is not among the most effective players.",
+        "severity": "major",
+        "rationale": "Xhaka's goals per shot ratio of 0.18 suggests he is not an effective scorer, which contradicts the claim of him being a top effective player (E02).",
+        "status": "addressed",
+        "target_version": 1
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "R01",
+        "challenge_id": "X01",
+        "author": "Tactical Performance Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "The revision acknowledges Choupo-Moting's superior efficiency, which undermines the claim of Martial being among the top effective players without qualification."
+      },
+      {
+        "response_id": "R02",
+        "challenge_id": "X02",
+        "author": "Tactical Performance Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "The initial claim overstated Xhaka's attacking output by not addressing the implications of his lower goals per shot ratio, which indicates less efficiency in converting shots into goals."
+      },
+      {
+        "response_id": "R03",
+        "challenge_id": "X03",
+        "author": "Tactical Performance Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "The revised claim provides a comparative analysis with other players who have the same goal count, addressing the challenge's concern about the lack of context for Nketiah's efficiency."
+      },
+      {
+        "response_id": "R04",
+        "challenge_id": "X04",
+        "author": "Current Form Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "While Martial's goal tally is decent, his goals per shot ratio indicates he is less effective compared to some other players, which aligns with the challenge's assertion."
+      },
+      {
+        "response_id": "R05",
+        "challenge_id": "X05",
+        "author": "Current Form Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "The original claim did not account for the context of Nketiah's goals per shot ratio, which is relatively low compared to other players, suggesting he may not be as effective as initially implied."
+      },
+      {
+        "response_id": "R06",
+        "challenge_id": "X06",
+        "author": "Current Form Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "The original claim did not account for the context of scoring efficiency, which is indeed low for Valverde compared to other players with similar goal tallies."
+      },
+      {
+        "response_id": "R07",
+        "challenge_id": "X07",
+        "author": "Current Form Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "The revision provides context by comparing Choupo-Moting's goals per shot ratio to other players, addressing the challenge's concern about misleading effectiveness."
+      },
+      {
+        "response_id": "R08",
+        "challenge_id": "X08",
+        "author": "Current Form Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E02"
+        ],
+        "resulting_version": 2,
+        "rationale": "While Xhaka has scored 9 goals, his goals per shot ratio of 0.18 indicates he is less effective compared to other players, suggesting a need for qualification in the original claim."
+      }
+    ]
+  }
+}

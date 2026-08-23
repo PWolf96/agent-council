@@ -1,0 +1,67 @@
+# Local development stack — client + server in one command:
+#
+#   docker compose up --build
+#
+# Services:
+#   client    Vite/React dev server (HMR)   -> http://localhost:5173
+#   server    FastAPI + uvicorn --reload    -> http://localhost:8080
+#
+# Postgres and Qdrant are NOT part of this compose — they are external resources
+# brought up separately. The server reaches them via host.docker.internal (i.e.
+# wherever they listen on your host). Secrets/config come from the repo-root .env
+# (OPENAI_API_KEY, DB_*, QDRANT_*); only the host portions are overridden below.
+name: agent-framework
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: .ci/Dockerfile.server.dev
+    env_file:
+      - .env
+    environment:
+      # MCP servers expose the agents' tools. The default in server/mcp/servers.toml
+      # points at localhost; inside the container localhost is the container itself,
+      # so rewrite to the host. In production, set this to the prod MCP URL (and
+      # MCP_FOOTBALL_ANALYTICS_TOKEN for auth) — config/env only, no code change.
+      MCP_FOOTBALL_ANALYTICS_URL: http://host.docker.internal:3001/mcp
+      # The MCP server's DNS-rebinding protection only trusts a localhost Host
+      # header, so reaching it via host.docker.internal otherwise gets a
+      # "421 Misdirected Request". We still CONNECT to host.docker.internal (the
+      # URL above) but send Host: localhost:3001 so the server accepts the request.
+      # (Alternative: add host.docker.internal to the MCP server's allowed_hosts.)
+      MCP_FOOTBALL_ANALYTICS_HEADERS: '{"Host": "localhost:3001"}'
+      # External Postgres/Qdrant: rewrite the .env localhost defaults to the host
+      # so the container can reach services running on your machine.
+      DB_HOST: host.docker.internal
+      DB_PORT: "5433"
+      QDRANT_URL: http://host.docker.internal:6333
+      # Langfuse runs on the host (separate compose project, published on :3000).
+      # The .env value is localhost:3000 for host-side tools (migrate_prompts,
+      # the langfuse CLI); inside the container localhost is the container itself,
+      # so rewrite it to the host like the DB/Qdrant entries above.
+      LANGFUSE_BASE_URL: http://host.docker.internal:3000
+    extra_hosts:
+      # Makes host.docker.internal resolve on plain Docker Engine (Linux) too.
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8080:8080"
+    volumes:
+      # Bind-mount source for hot reload. The .venv stays inside the image.
+      - ./server:/app/server
+
+  client:
+    build:
+      context: .
+      dockerfile: .ci/Dockerfile.client.dev
+    environment:
+      # Consumed by client/vite.config.ts to proxy /api at the server container.
+      VITE_API_PROXY_TARGET: http://server:8080
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./client:/app
+      # Keep the image's node_modules; don't let the host directory shadow it.
+      - /app/node_modules
+    depends_on:
+      - server

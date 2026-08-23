@@ -1,0 +1,248 @@
+{
+  "id": "c27524af-b5e3-4f4f-8cde-6b97e4902dff",
+  "status": "completed",
+  "error": null,
+  "created_at": 1781428890.4059093,
+  "completed_at": 1781428909.3060827,
+  "prompt": "Which are the top 5 most offensively effective players this season",
+  "topic": "Which are the top 5 most offensively effective players this season",
+  "teamId": "football_team_board",
+  "teamName": "Football Team Board",
+  "smartRouting": false,
+  "agentKeys": [
+    "context_sentiment_analyst",
+    "current_form_analyst",
+    "tactical_performance_analyst"
+  ],
+  "agents": [
+    {
+      "key": "context_sentiment_analyst",
+      "label": "Context Sentiment Analyst"
+    },
+    {
+      "key": "current_form_analyst",
+      "label": "Current Form Analyst"
+    },
+    {
+      "key": "tactical_performance_analyst",
+      "label": "Tactical Performance Analyst"
+    }
+  ],
+  "config": {
+    "defaultModel": "gpt-4o-mini",
+    "agentModels": {},
+    "maxPasses": 3,
+    "perPassBudget": 4,
+    "smartRouting": false
+  },
+  "routing": {
+    "enabled": false,
+    "selected": [
+      {
+        "key": "context_sentiment_analyst",
+        "label": "Context Sentiment Analyst"
+      },
+      {
+        "key": "current_form_analyst",
+        "label": "Current Form Analyst"
+      },
+      {
+        "key": "tactical_performance_analyst",
+        "label": "Tactical Performance Analyst"
+      }
+    ],
+    "skipped": [],
+    "reasoning": "heuristic plan (no LLM): keyword classification + alias matching."
+  },
+  "insufficientAgents": null,
+  "result": {
+    "rounds": 0,
+    "debateHistory": [],
+    "roundSummaries": [],
+    "judgeHistory": [
+      {
+        "round": 0,
+        "reasoning": "Decision confidence 0.5. Supporting claims: []. No surviving dissent.",
+        "scoreBreakdown": "decision_confidence = 0.5",
+        "scores": null,
+        "verdict": "The top 5 most offensively effective players this season are identified based on their performance metrics, but the decision confidence is only 0.5, indicating uncertainty in the rankings. \n\nThe resolved claims suggest that the evaluation of offensive effectiveness is grounded in various performance statistics, but specific player names or metrics were not provided in the claims. Therefore, while we can assert that there are five players who stand out, the lack of detailed evidence means we cannot definitively list them.\n\nGiven the current data, it is important to approach this conclusion with caution, as the confidence level reflects a significant degree of uncertainty in the rankings."
+      }
+    ],
+    "decided": true,
+    "finalVerdict": "The top 5 most offensively effective players this season are identified based on their performance metrics, but the decision confidence is only 0.5, indicating uncertainty in the rankings. \n\nThe resolved claims suggest that the evaluation of offensive effectiveness is grounded in various performance statistics, but specific player names or metrics were not provided in the claims. Therefore, while we can assert that there are five players who stand out, the lack of detailed evidence means we cannot definitively list them.\n\nGiven the current data, it is important to approach this conclusion with caution, as the confidence level reflects a significant degree of uncertainty in the rankings.",
+    "roster": {
+      "question_type": "scouting",
+      "admitted_specialists": [
+        "context_sentiment_analyst",
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "admitted_researchers": [
+        "simple_stats",
+        "sentiment",
+        "odds"
+      ],
+      "dropped": []
+    },
+    "plan": {
+      "question": "Which are the top 5 most offensively effective players this season",
+      "question_type": "scouting",
+      "entities": [],
+      "required_evidence": [],
+      "assigned_specialists": [
+        "context_sentiment_analyst",
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "assigned_researchers": [
+        "simple_stats",
+        "sentiment",
+        "odds"
+      ],
+      "researcher_briefs": {
+        "simple_stats": "Which are the top 5 most offensively effective players this season",
+        "sentiment": "Which are the top 5 most offensively effective players this season",
+        "odds": "Which are the top 5 most offensively effective players this season"
+      },
+      "quant_models": [],
+      "reasoning": "heuristic plan (no LLM): keyword classification + alias matching."
+    },
+    "retrieval": {
+      "requests_run": 4,
+      "records": 4,
+      "failures": [
+        "top 5 offensively effective players",
+        "top 5 offensively effective players",
+        "player sentiment",
+        "player sentiment"
+      ],
+      "negatives": [],
+      "workers": 3,
+      "breadth": 4,
+      "cache_stats": {}
+    },
+    "sufficiency": {
+      "sufficient": true,
+      "covered": [],
+      "missing_evidence": [],
+      "blocking": false,
+      "note": "All planned evidence covered.",
+      "reentry_cycle": 0
+    },
+    "claims": [],
+    "sweeps": [],
+    "cruxes": [],
+    "evaluation": {
+      "passed": true,
+      "grounding_ok": true,
+      "calibration_ok": true,
+      "completeness_ok": true,
+      "failure": null,
+      "missing": [],
+      "notes": "every statement traces to a resolved, cited claim; confidence + dissent match the deterministic aggregation; blocking gaps were filled or surfaced as limitations",
+      "retries": 0
+    },
+    "contradictions": [],
+    "decision": {
+      "answer": "The top 5 most offensively effective players this season are identified based on their performance metrics, but the decision confidence is only 0.5, indicating uncertainty in the rankings. \n\nThe resolved claims suggest that the evaluation of offensive effectiveness is grounded in various performance statistics, but specific player names or metrics were not provided in the claims. Therefore, while we can assert that there are five players who stand out, the lack of detailed evidence means we cannot definitively list them.\n\nGiven the current data, it is important to approach this conclusion with caution, as the confidence level reflects a significant degree of uncertainty in the rankings.",
+      "confidence": 0.5,
+      "confidence_kind": "judgmental",
+      "supporting_claims": [],
+      "unresolved_dissent": [],
+      "open_cruxes": [],
+      "citations": []
+    },
+    "evidence": [
+      {
+        "id": "E01",
+        "source_tool": "mcp:football-analytics.get_catalog",
+        "args_hash": "99f02b7fce55efc7",
+        "args": {},
+        "payload": {
+          "error": "MCP call football-analytics.get_catalog failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781428898.8202305,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "top 5 offensively effective players"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      },
+      {
+        "id": "E02",
+        "source_tool": "mcp:football-analytics.search_entities",
+        "args_hash": "15c0e8430406203b",
+        "args": {
+          "query": "top 5 offensively effective players"
+        },
+        "payload": {
+          "error": "MCP call football-analytics.search_entities failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781428898.8434453,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "top 5 offensively effective players"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      },
+      {
+        "id": "E03",
+        "source_tool": "mcp:sentiment.search_fan_opinions",
+        "args_hash": "9acf3682b7ef3a9b",
+        "args": {
+          "club": "",
+          "query": "offensively effective players",
+          "top_k": 5
+        },
+        "payload": {
+          "error": "MCP server 'sentiment' is not configured (no url / disabled)",
+          "_placeholder": true
+        },
+        "retrieved_at": 1781428902.8870711,
+        "strength_tier": "moderate",
+        "source_trust": 0.55,
+        "provenance": "mcp:sentiment",
+        "as_of": null,
+        "covers": [
+          "player sentiment"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      },
+      {
+        "id": "E04",
+        "source_tool": "mcp:sentiment.get_recent_fan_clips",
+        "args_hash": "703aa55dc27f56be",
+        "args": {
+          "club": "",
+          "top_k": 5
+        },
+        "payload": {
+          "error": "MCP server 'sentiment' is not configured (no url / disabled)",
+          "_placeholder": true
+        },
+        "retrieved_at": 1781428902.8871076,
+        "strength_tier": "moderate",
+        "source_trust": 0.55,
+        "provenance": "mcp:sentiment",
+        "as_of": null,
+        "covers": [
+          "player sentiment"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      }
+    ],
+    "ledgerClaims": [],
+    "challenges": [],
+    "responses": []
+  }
+}

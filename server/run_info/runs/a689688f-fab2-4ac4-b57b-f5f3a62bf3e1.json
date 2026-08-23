@@ -1,0 +1,253 @@
+{
+  "id": "a689688f-fab2-4ac4-b57b-f5f3a62bf3e1",
+  "status": "completed",
+  "error": null,
+  "created_at": 1781430957.5913124,
+  "completed_at": 1781430969.1294067,
+  "prompt": "Give me a list of the top 5 most effective players. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+  "topic": "Give me a list of the top 5 most effective players. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+  "teamId": "football_team_board",
+  "teamName": "Football Team Board",
+  "smartRouting": false,
+  "agentKeys": [
+    "context_sentiment_analyst",
+    "current_form_analyst",
+    "tactical_performance_analyst"
+  ],
+  "agents": [
+    {
+      "key": "current_form_analyst",
+      "label": "Current Form Analyst"
+    },
+    {
+      "key": "tactical_performance_analyst",
+      "label": "Tactical Performance Analyst"
+    }
+  ],
+  "config": {
+    "defaultModel": "gpt-4o-mini",
+    "agentModels": {},
+    "maxPasses": 3,
+    "perPassBudget": 4,
+    "smartRouting": false
+  },
+  "routing": {
+    "enabled": false,
+    "selected": [
+      {
+        "key": "current_form_analyst",
+        "label": "Current Form Analyst"
+      },
+      {
+        "key": "tactical_performance_analyst",
+        "label": "Tactical Performance Analyst"
+      }
+    ],
+    "skipped": [
+      {
+        "key": "context_sentiment_analyst",
+        "label": "Context Sentiment Analyst"
+      }
+    ],
+    "reasoning": "The question is about ranking players based on effectiveness, which falls under valuation. The tactical performance analyst will provide insights on attacking output, while the current form analyst will assess recent performance trends. The simple stats researcher will gather the necessary statistics to create a grading system."
+  },
+  "insufficientAgents": null,
+  "result": {
+    "rounds": 0,
+    "debateHistory": [],
+    "roundSummaries": [],
+    "judgeHistory": [
+      {
+        "round": 0,
+        "reasoning": "Decision confidence 0.5. Supporting claims: []. Surviving dissent (1): Retrieval failure \u2014 4 tool call(s) errored and no usable evidence was gathered, so this reflects missing data, not its absence (retryable). Sample error: MCP call football-analytics.get_catalog failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more ",
+        "scoreBreakdown": "decision_confidence = 0.5",
+        "scores": null,
+        "verdict": "The top 5 most effective players cannot be definitively listed due to a decision confidence of 0.5, indicating uncertainty in the data. The analysis relied on standard statistics, attacking effectiveness, and playing time, but retrieval failures resulted in missing data that could not be gathered, as noted in the unresolved dissent.\n\nGiven the lack of complete evidence, any ranking or grading system proposed would be speculative and not grounded in the necessary statistics. Therefore, it is recommended to revisit the data collection process to ensure all relevant statistics are available for a more accurate assessment of player effectiveness."
+      }
+    ],
+    "decided": true,
+    "finalVerdict": "The top 5 most effective players cannot be definitively listed due to a decision confidence of 0.5, indicating uncertainty in the data. The analysis relied on standard statistics, attacking effectiveness, and playing time, but retrieval failures resulted in missing data that could not be gathered, as noted in the unresolved dissent.\n\nGiven the lack of complete evidence, any ranking or grading system proposed would be speculative and not grounded in the necessary statistics. Therefore, it is recommended to revisit the data collection process to ensure all relevant statistics are available for a more accurate assessment of player effectiveness.",
+    "roster": {
+      "question_type": "scouting",
+      "admitted_specialists": [
+        "context_sentiment_analyst",
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "admitted_researchers": [
+        "simple_stats",
+        "sentiment",
+        "odds"
+      ],
+      "dropped": []
+    },
+    "plan": {
+      "question": "Give me a list of the top 5 most effective players. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+      "question_type": "valuation",
+      "entities": [],
+      "required_evidence": [],
+      "assigned_specialists": [
+        "tactical_performance_analyst",
+        "current_form_analyst"
+      ],
+      "assigned_researchers": [
+        "simple_stats"
+      ],
+      "researcher_briefs": {
+        "simple_stats": "Gather structured football statistics on player output, attacking effectiveness, and playing time."
+      },
+      "quant_models": [],
+      "reasoning": "The question is about ranking players based on effectiveness, which falls under valuation. The tactical performance analyst will provide insights on attacking output, while the current form analyst will assess recent performance trends. The simple stats researcher will gather the necessary statistics to create a grading system."
+    },
+    "retrieval": {
+      "requests_run": 4,
+      "records": 4,
+      "failures": [
+        "player output",
+        "player output",
+        "playing time",
+        "attacking effectiveness"
+      ],
+      "negatives": [],
+      "workers": 1,
+      "breadth": 4,
+      "cache_stats": {}
+    },
+    "sufficiency": {
+      "sufficient": true,
+      "covered": [],
+      "missing_evidence": [],
+      "blocking": false,
+      "note": "All planned evidence covered.",
+      "reentry_cycle": 0
+    },
+    "claims": [],
+    "sweeps": [],
+    "cruxes": [],
+    "evaluation": {
+      "passed": true,
+      "grounding_ok": true,
+      "calibration_ok": true,
+      "completeness_ok": true,
+      "failure": null,
+      "missing": [],
+      "notes": "every statement traces to a resolved, cited claim; confidence + dissent match the deterministic aggregation; blocking gaps were filled or surfaced as limitations",
+      "retries": 0
+    },
+    "contradictions": [],
+    "decision": {
+      "answer": "The top 5 most effective players cannot be definitively listed due to a decision confidence of 0.5, indicating uncertainty in the data. The analysis relied on standard statistics, attacking effectiveness, and playing time, but retrieval failures resulted in missing data that could not be gathered, as noted in the unresolved dissent.\n\nGiven the lack of complete evidence, any ranking or grading system proposed would be speculative and not grounded in the necessary statistics. Therefore, it is recommended to revisit the data collection process to ensure all relevant statistics are available for a more accurate assessment of player effectiveness.",
+      "confidence": 0.5,
+      "confidence_kind": "judgmental",
+      "supporting_claims": [],
+      "unresolved_dissent": [
+        {
+          "claim_id": "-",
+          "owner": "Evidence Reviewer",
+          "summary": "Retrieval failure \u2014 4 tool call(s) errored and no usable evidence was gathered, so this reflects missing data, not its absence (retryable). Sample error: MCP call football-analytics.get_catalog failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more "
+        }
+      ],
+      "open_cruxes": [],
+      "citations": []
+    },
+    "evidence": [
+      {
+        "id": "E01",
+        "source_tool": "mcp:football-analytics.get_catalog",
+        "args_hash": "99f02b7fce55efc7",
+        "args": {},
+        "payload": {
+          "error": "MCP call football-analytics.get_catalog failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781430965.3724532,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "player output",
+          "attacking effectiveness",
+          "playing time"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      },
+      {
+        "id": "E02",
+        "source_tool": "mcp:football-analytics.query_data",
+        "args_hash": "5a9be47f353c1d2d",
+        "args": {
+          "request": {
+            "dataset": "squad_standard_stats",
+            "limit": 100
+          }
+        },
+        "payload": {
+          "error": "MCP call football-analytics.query_data failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781430965.399506,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "player output",
+          "attacking effectiveness"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      },
+      {
+        "id": "E03",
+        "source_tool": "mcp:football-analytics.query_data",
+        "args_hash": "d5d155a3344993d2",
+        "args": {
+          "request": {
+            "dataset": "squad_playing_time",
+            "limit": 100
+          }
+        },
+        "payload": {
+          "error": "MCP call football-analytics.query_data failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781430965.4309778,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "playing time"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      },
+      {
+        "id": "E04",
+        "source_tool": "mcp:football-analytics.query_data",
+        "args_hash": "34c073657b4240b5",
+        "args": {
+          "request": {
+            "dataset": "squad_shooting",
+            "limit": 100
+          }
+        },
+        "payload": {
+          "error": "MCP call football-analytics.query_data failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781430965.455731,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "attacking effectiveness"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      }
+    ],
+    "ledgerClaims": [],
+    "challenges": [],
+    "responses": []
+  }
+}

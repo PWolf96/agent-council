@@ -1,0 +1,195 @@
+{
+  "id": "326dc577-fc57-4f97-8463-8497c2c4e35d",
+  "status": "completed",
+  "error": null,
+  "created_at": 1781429576.8832104,
+  "completed_at": 1781429588.5701509,
+  "prompt": "Give me a list of the top 5 most effective players. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+  "topic": "Give me a list of the top 5 most effective players. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+  "teamId": "football_team_board",
+  "teamName": "Football Team Board",
+  "smartRouting": false,
+  "agentKeys": [
+    "context_sentiment_analyst",
+    "current_form_analyst",
+    "tactical_performance_analyst"
+  ],
+  "agents": [
+    {
+      "key": "current_form_analyst",
+      "label": "Current Form Analyst"
+    },
+    {
+      "key": "tactical_performance_analyst",
+      "label": "Tactical Performance Analyst"
+    }
+  ],
+  "config": {
+    "defaultModel": "gpt-4o-mini",
+    "agentModels": {},
+    "maxPasses": 3,
+    "perPassBudget": 4,
+    "smartRouting": false
+  },
+  "routing": {
+    "enabled": false,
+    "selected": [
+      {
+        "key": "current_form_analyst",
+        "label": "Current Form Analyst"
+      },
+      {
+        "key": "tactical_performance_analyst",
+        "label": "Tactical Performance Analyst"
+      }
+    ],
+    "skipped": [
+      {
+        "key": "context_sentiment_analyst",
+        "label": "Context Sentiment Analyst"
+      }
+    ],
+    "reasoning": "The question is about ranking players based on effectiveness, which falls under valuation. The tactical performance analyst will help assess attacking effectiveness, while the current form analyst will provide insights on recent performance trends. The simple stats researcher will gather the necessary statistics to create a grading system."
+  },
+  "insufficientAgents": null,
+  "result": {
+    "rounds": 0,
+    "debateHistory": [],
+    "roundSummaries": [],
+    "judgeHistory": [
+      {
+        "round": 0,
+        "reasoning": "Decision confidence 0.5. Supporting claims: []. No surviving dissent.",
+        "scoreBreakdown": "decision_confidence = 0.5",
+        "scores": null,
+        "verdict": "The top 5 most effective players, based on a grading system that incorporates standard statistics, attacking effectiveness, and playing time, cannot be definitively determined due to a lack of resolved claims supporting specific player rankings. The decision confidence in this assessment is 0.5, indicating uncertainty in the results.\n\nWithout concrete evidence or resolved claims to guide the grading system and player rankings, it is not possible to provide a reliable list of the top players. Therefore, further analysis and data are required to establish a clear ranking based on the specified criteria."
+      }
+    ],
+    "decided": true,
+    "finalVerdict": "The top 5 most effective players, based on a grading system that incorporates standard statistics, attacking effectiveness, and playing time, cannot be definitively determined due to a lack of resolved claims supporting specific player rankings. The decision confidence in this assessment is 0.5, indicating uncertainty in the results.\n\nWithout concrete evidence or resolved claims to guide the grading system and player rankings, it is not possible to provide a reliable list of the top players. Therefore, further analysis and data are required to establish a clear ranking based on the specified criteria.",
+    "roster": {
+      "question_type": "scouting",
+      "admitted_specialists": [
+        "context_sentiment_analyst",
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "admitted_researchers": [
+        "simple_stats",
+        "sentiment",
+        "odds"
+      ],
+      "dropped": []
+    },
+    "plan": {
+      "question": "Give me a list of the top 5 most effective players. Use standard statistics, attacking effectiveness and playing time as your inputs. I want you to come up with a grading system and then rank the players based on that grading system that includes the pulled stats.",
+      "question_type": "valuation",
+      "entities": [],
+      "required_evidence": [],
+      "assigned_specialists": [
+        "tactical_performance_analyst",
+        "current_form_analyst"
+      ],
+      "assigned_researchers": [
+        "simple_stats"
+      ],
+      "researcher_briefs": {
+        "simple_stats": "Gather structured football statistics on player output, attacking effectiveness, and playing time."
+      },
+      "quant_models": [],
+      "reasoning": "The question is about ranking players based on effectiveness, which falls under valuation. The tactical performance analyst will help assess attacking effectiveness, while the current form analyst will provide insights on recent performance trends. The simple stats researcher will gather the necessary statistics to create a grading system."
+    },
+    "retrieval": {
+      "requests_run": 2,
+      "records": 2,
+      "failures": [
+        "player output",
+        "player output"
+      ],
+      "negatives": [],
+      "workers": 1,
+      "breadth": 2,
+      "cache_stats": {}
+    },
+    "sufficiency": {
+      "sufficient": true,
+      "covered": [],
+      "missing_evidence": [],
+      "blocking": false,
+      "note": "All planned evidence covered.",
+      "reentry_cycle": 0
+    },
+    "claims": [],
+    "sweeps": [],
+    "cruxes": [],
+    "evaluation": {
+      "passed": true,
+      "grounding_ok": true,
+      "calibration_ok": true,
+      "completeness_ok": true,
+      "failure": null,
+      "missing": [],
+      "notes": "every statement traces to a resolved, cited claim; confidence + dissent match the deterministic aggregation; blocking gaps were filled or surfaced as limitations",
+      "retries": 0
+    },
+    "contradictions": [],
+    "decision": {
+      "answer": "The top 5 most effective players, based on a grading system that incorporates standard statistics, attacking effectiveness, and playing time, cannot be definitively determined due to a lack of resolved claims supporting specific player rankings. The decision confidence in this assessment is 0.5, indicating uncertainty in the results.\n\nWithout concrete evidence or resolved claims to guide the grading system and player rankings, it is not possible to provide a reliable list of the top players. Therefore, further analysis and data are required to establish a clear ranking based on the specified criteria.",
+      "confidence": 0.5,
+      "confidence_kind": "judgmental",
+      "supporting_claims": [],
+      "unresolved_dissent": [],
+      "open_cruxes": [],
+      "citations": []
+    },
+    "evidence": [
+      {
+        "id": "E01",
+        "source_tool": "mcp:football-analytics.get_catalog",
+        "args_hash": "99f02b7fce55efc7",
+        "args": {},
+        "payload": {
+          "error": "MCP call football-analytics.get_catalog failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781429584.8936045,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "player output",
+          "attacking effectiveness",
+          "playing time"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      },
+      {
+        "id": "E02",
+        "source_tool": "mcp:football-analytics.search_entities",
+        "args_hash": "a8694bae7a5aa87a",
+        "args": {
+          "query": "top players"
+        },
+        "payload": {
+          "error": "MCP call football-analytics.search_entities failed: HTTPStatusError: Client error '421 Misdirected Request' for url 'http://host.docker.internal:3001/mcp'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+        },
+        "retrieved_at": 1781429584.9166095,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "player output",
+          "attacking effectiveness",
+          "playing time"
+        ],
+        "is_empty": true,
+        "is_negative_result": false
+      }
+    ],
+    "ledgerClaims": [],
+    "challenges": [],
+    "responses": []
+  }
+}

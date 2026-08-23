@@ -1,0 +1,8 @@
+{
+    "name": "Football Team Board",
+    "agent_descriptions": {
+        "current_form_analyst": "Recent results, momentum, and scoring/conceding trends — whether a side is rising or sliding right now. Reads fixtures and form from the shared evidence store.",
+        "tactical_performance_analyst": "On-pitch performance end to end: attacking output and chance creation (in possession), defensive solidity and goalkeeping (out of possession), and counter-attack/counter-press (transitions). Merger of the in/out/transition analysts.",
+        "context_sentiment_analyst": "The human and contextual side: fatigue/injury risk and fixture congestion (physical), mentality and discipline under pressure (psychological), narrative and hype (social), and the fan voice itself. Merger of the physical/psychological/social/fan-sentiment analysts."
+    }
+}

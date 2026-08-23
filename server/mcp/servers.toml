@@ -1,0 +1,33 @@
+# MCP server registry (defaults). Each [servers.<name>] declares one server the
+# researcher team can reach. Every field is overridable per server by env var —
+# see server/mcp/config.py — so local->prod is a config/env change, not code.
+#
+#   transport = "streamable_http" | "sse" | "stdio"
+#   url       = endpoint (streamable_http / sse)
+#   enabled   = false  -> calls to this server return a clean "not configured" gap
+#
+# Override in prod, e.g.:
+#   MCP_FOOTBALL_ANALYTICS_URL=https://mcp.prod.internal/football/mcp
+#   MCP_FOOTBALL_ANALYTICS_TOKEN=...        # -> Authorization: Bearer ...
+
+[servers.football-analytics]
+# Football statistics (squad shooting / standard / playing-time datasets).
+# Tools: get_catalog, query_data, search_entities.
+transport = "streamable_http"
+url = "http://localhost:3001/mcp"
+enabled = true
+
+# --- servers whose researchers exist but whose backends aren't stood up yet. --
+# Disabled => their researchers' calls record clean gaps until a URL is wired.
+
+[servers.sentiment]
+# Fan-voice / qualitative sentiment.
+transport = "streamable_http"
+url = ""
+enabled = false
+
+[servers.odds]
+# Betting-market signal.
+transport = "streamable_http"
+url = ""
+enabled = false

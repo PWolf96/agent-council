@@ -1,0 +1,196 @@
+{
+  "id": "1fdf1e36-6bb6-4c95-a5d9-3a830c17e5f3",
+  "status": "completed",
+  "error": null,
+  "created_at": 1781371596.028907,
+  "completed_at": 1781371609.8696206,
+  "prompt": "Who will win the world cup?",
+  "topic": "Who will win the world cup?",
+  "teamId": "football_team_board",
+  "teamName": "Football Team Board",
+  "smartRouting": false,
+  "agentKeys": [
+    "context_sentiment_analyst",
+    "current_form_analyst",
+    "tactical_performance_analyst"
+  ],
+  "agents": [
+    {
+      "key": "current_form_analyst",
+      "label": "Current Form Analyst"
+    },
+    {
+      "key": "tactical_performance_analyst",
+      "label": "Tactical Performance Analyst"
+    }
+  ],
+  "config": {
+    "defaultModel": "gpt-4o-mini",
+    "agentModels": {},
+    "maxPasses": 3,
+    "perPassBudget": 2,
+    "smartRouting": false
+  },
+  "routing": {
+    "enabled": false,
+    "selected": [
+      {
+        "key": "current_form_analyst",
+        "label": "Current Form Analyst"
+      },
+      {
+        "key": "tactical_performance_analyst",
+        "label": "Tactical Performance Analyst"
+      }
+    ],
+    "skipped": [
+      {
+        "key": "context_sentiment_analyst",
+        "label": "Context Sentiment Analyst"
+      }
+    ],
+    "reasoning": "The question asks for a prediction of the World Cup winner, which involves assessing the likelihood of each team's success based on their current form and tactical performance."
+  },
+  "insufficientAgents": null,
+  "result": {
+    "rounds": 0,
+    "debateHistory": [],
+    "roundSummaries": [],
+    "judgeHistory": [
+      {
+        "round": 0,
+        "reasoning": "Decision confidence 0.5. Supporting claims: []. No surviving dissent.",
+        "scoreBreakdown": "decision_confidence = 0.5",
+        "scores": null,
+        "verdict": "The probability of a specific team winning the World Cup is currently assessed at 50%. This reflects a balanced view of the competing teams, with no clear favorite emerging from the evidence.\n\nThe decision confidence is moderate, indicating that while there are strong contenders, the outcome remains uncertain. There is no unresolved dissent, suggesting consensus on the lack of a definitive winner at this time."
+      }
+    ],
+    "decided": true,
+    "finalVerdict": "The probability of a specific team winning the World Cup is currently assessed at 50%. This reflects a balanced view of the competing teams, with no clear favorite emerging from the evidence.\n\nThe decision confidence is moderate, indicating that while there are strong contenders, the outcome remains uncertain. There is no unresolved dissent, suggesting consensus on the lack of a definitive winner at this time.",
+    "roster": {
+      "question_type": "scouting",
+      "admitted_specialists": [
+        "context_sentiment_analyst",
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "admitted_researchers": [
+        "stats",
+        "quant",
+        "sentiment"
+      ],
+      "dropped": []
+    },
+    "plan": {
+      "question": "Who will win the world cup?",
+      "question_type": "probability",
+      "entities": [],
+      "required_evidence": [
+        {
+          "label": "general fan sentiment",
+          "tool": "search_fan_opinions",
+          "args": {
+            "query": "The question asks for a prediction of the World Cup winner, which involves assessing the likelihood of each team's success based on their current form and tactical performance.",
+            "top_k": 8
+          },
+          "critical": false,
+          "min_tier": "weak",
+          "max_age_days": 0,
+          "as_of": null
+        }
+      ],
+      "assigned_specialists": [
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "quant_models": [
+        "win_probability"
+      ],
+      "reasoning": "The question asks for a prediction of the World Cup winner, which involves assessing the likelihood of each team's success based on their current form and tactical performance."
+    },
+    "retrieval": {
+      "requests_run": 1,
+      "records": 1,
+      "failures": [],
+      "negatives": [
+        "general fan sentiment"
+      ],
+      "workers": 1,
+      "breadth": 1,
+      "cache_stats": {
+        "hits": 0,
+        "misses": 1,
+        "size": 1
+      }
+    },
+    "sufficiency": {
+      "sufficient": true,
+      "covered": [
+        "general fan sentiment"
+      ],
+      "missing_evidence": [],
+      "blocking": false,
+      "note": "All planned evidence covered.",
+      "reentry_cycle": 0
+    },
+    "claims": [],
+    "sweeps": [],
+    "cruxes": [],
+    "evaluation": {
+      "passed": true,
+      "grounding_ok": true,
+      "calibration_ok": true,
+      "completeness_ok": true,
+      "failure": null,
+      "missing": [],
+      "notes": "every statement traces to a resolved, cited claim; confidence + dissent match the deterministic aggregation; blocking gaps were filled or surfaced as limitations",
+      "retries": 0
+    },
+    "contradictions": [],
+    "decision": {
+      "answer": "The probability of a specific team winning the World Cup is currently assessed at 50%. This reflects a balanced view of the competing teams, with no clear favorite emerging from the evidence.\n\nThe decision confidence is moderate, indicating that while there are strong contenders, the outcome remains uncertain. There is no unresolved dissent, suggesting consensus on the lack of a definitive winner at this time.",
+      "confidence": 0.5,
+      "confidence_kind": "calibratable",
+      "supporting_claims": [],
+      "unresolved_dissent": [],
+      "open_cruxes": [],
+      "citations": []
+    },
+    "evidence": [
+      {
+        "id": "E01",
+        "source_tool": "search_fan_opinions",
+        "args_hash": "e9d6c6330509d617",
+        "args": {
+          "query": "The question asks for a prediction of the World Cup winner, which involves assessing the likelihood of each team's success based on their current form and tactical performance.",
+          "top_k": 8
+        },
+        "payload": {
+          "query": "The question asks for a prediction of the World Cup winner, which involves assessing the likelihood of each team's success based on their current form and tactical performance.",
+          "collections_searched": [
+            "yt_transcripts"
+          ],
+          "results": [],
+          "errors": [
+            {
+              "error": "search failed on 'yt_transcripts': [Errno 101] Network is unreachable"
+            }
+          ]
+        },
+        "retrieved_at": 1781371604.9329195,
+        "strength_tier": "moderate",
+        "source_trust": 0.55,
+        "provenance": "qdrant",
+        "as_of": null,
+        "covers": [
+          "general fan sentiment"
+        ],
+        "is_empty": true,
+        "is_negative_result": true
+      }
+    ],
+    "ledgerClaims": [],
+    "challenges": [],
+    "responses": []
+  }
+}

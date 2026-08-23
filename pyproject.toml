@@ -1,0 +1,29 @@
+[project]
+name = "agent-framework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "langchain-openai>=1.1.12",
+    "langchain>=1.2.10",
+    "psycopg2-binary>=2.9.11",
+    "qdrant-client>=1.17.1",
+    "python-dotenv>=1.2.1",
+    "fastapi>=0.135.3",
+    "uvicorn>=0.43.0",
+    "langfuse>=4.7.1",
+    "numpy>=2.0",
+    "mcp>=1.27",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+
+[tool.pytest.ini_options]
+# Run from the repo root; tests live in ``server/tests`` and import ``server.*``.
+testpaths = ["server/tests"]
+addopts = "-q"
+pythonpath = ["."]

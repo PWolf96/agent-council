@@ -1,0 +1,1038 @@
+{
+  "id": "0fa24b2e-e63d-452c-bbda-5716fdccbdd5",
+  "status": "completed",
+  "error": null,
+  "created_at": 1781465167.0424013,
+  "completed_at": 1781465225.454212,
+  "prompt": "Who are the 7 most clinical teams during season 2025-2026?",
+  "topic": "Who are the 7 most clinical teams during season 2025-2026?",
+  "teamId": "football_team_board",
+  "teamName": "Football Team Board",
+  "smartRouting": false,
+  "agentKeys": [
+    "context_sentiment_analyst",
+    "current_form_analyst",
+    "tactical_performance_analyst"
+  ],
+  "agents": [
+    {
+      "key": "current_form_analyst",
+      "label": "Current Form Analyst"
+    },
+    {
+      "key": "tactical_performance_analyst",
+      "label": "Tactical Performance Analyst"
+    }
+  ],
+  "config": {
+    "defaultModel": "gpt-4o-mini",
+    "agentModels": {},
+    "maxPasses": 3,
+    "perPassBudget": 4,
+    "smartRouting": false
+  },
+  "routing": {
+    "enabled": false,
+    "selected": [
+      {
+        "key": "current_form_analyst",
+        "label": "Current Form Analyst"
+      },
+      {
+        "key": "tactical_performance_analyst",
+        "label": "Tactical Performance Analyst"
+      }
+    ],
+    "skipped": [
+      {
+        "key": "context_sentiment_analyst",
+        "label": "Context Sentiment Analyst"
+      }
+    ],
+    "reasoning": "The question requires an assessment of teams' clinical performance in terms of scoring efficiency, which aligns with the scouting type. The current form and tactical performance analysts will provide insights into recent trends and on-pitch effectiveness, while the simple_stats researcher will gather the necessary statistical data."
+  },
+  "insufficientAgents": null,
+  "result": {
+    "rounds": 2,
+    "debateHistory": [
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C01] (confidence 0.8) Team 28 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E01"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C02] (confidence 0.8) Team 31 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E01"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C03] (confidence 0.8) Team 13 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E01"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Current Form Analyst",
+        "argument": "[C04] (confidence 0.8) Team 14 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E01"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Tactical Performance Analyst",
+        "argument": "[C05] (confidence 0.85) Teams with the highest shooting efficiency in the 2025-2026 season include teams 28, 31, 13, 14, and 2, all achieving a goals per shot ratio of 1.00 (E01).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E01"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Tactical Performance Analyst",
+        "argument": "[C06] (confidence 0.75) Team 9 has a lower shooting efficiency with a goals per shot ratio of 0.50, scoring 4 goals from 8 shots (E01).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E01"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "agent": "Tactical Performance Analyst",
+        "argument": "[C07] (confidence 0.7) Team 12 also demonstrates a goals per shot ratio of 0.50, scoring 1 goal from 2 shots, indicating moderate clinical efficiency (E01).",
+        "tool_calls": [
+          {
+            "tool": "cite",
+            "args": {
+              "evidence_ids": [
+                "E01"
+              ]
+            },
+            "result": ""
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X04 (inference_dispute, major) by Tactical Performance Analyst on C01 \u2192 owner revise; confidence 0.8\u21920.7381 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X05 (inference_dispute, major) by Tactical Performance Analyst on C02 \u2192 owner revise; confidence 0.8\u21920.7381 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X06 (inference_dispute, major) by Tactical Performance Analyst on C03 \u2192 owner concede; confidence 0.8\u21920.4841 [refuted]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Current Form Analyst",
+        "argument": "Challenge X07 (inference_dispute, major) by Tactical Performance Analyst on C04 \u2192 owner concede; confidence 0.8\u21920.4841 [refuted]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Tactical Performance Analyst",
+        "argument": "Challenge X01 (missing_evidence, major) by Current Form Analyst on C05 \u2192 owner revise; confidence 0.85\u21920.7997 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Tactical Performance Analyst",
+        "argument": "Challenge X02 (missing_evidence, minor) by Current Form Analyst on C06 \u2192 owner revise; confidence 0.75\u21920.6789 [revised]",
+        "tool_calls": []
+      },
+      {
+        "round": 2,
+        "agent": "Tactical Performance Analyst",
+        "argument": "Challenge X03 (missing_evidence, minor) by Current Form Analyst on C07 \u2192 owner revise; confidence 0.7\u21920.6218 [revised]",
+        "tool_calls": []
+      }
+    ],
+    "roundSummaries": [],
+    "judgeHistory": [
+      {
+        "round": 2,
+        "reasoning": "Decision confidence 0.7153. Supporting claims: ['C05', 'C01', 'C02', 'C06', 'C07']. Surviving dissent (2): Refuted in deliberation (recorded): Team 13 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).; Refuted in deliberation (recorded): Team 14 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "scoreBreakdown": "decision_confidence = 0.7153",
+        "scores": null,
+        "verdict": "1. Team 28: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n2. Team 31: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n3. Team 13: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n4. Team 14: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n5. Team 2: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n6. Team 9: Shooting Efficiency - 0.50 goals per shot (4 goals from 8 shots)\n7. Team 12: Shooting Efficiency - 0.50 goals per shot (1 goal from 2 shots)\n\nConfidence in this ranking is moderate at 71.53%. There is unresolved dissent regarding the shooting efficiency of Teams 13 and 14, which were refuted in deliberation."
+      }
+    ],
+    "decided": true,
+    "finalVerdict": "1. Team 28: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n2. Team 31: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n3. Team 13: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n4. Team 14: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n5. Team 2: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n6. Team 9: Shooting Efficiency - 0.50 goals per shot (4 goals from 8 shots)\n7. Team 12: Shooting Efficiency - 0.50 goals per shot (1 goal from 2 shots)\n\nConfidence in this ranking is moderate at 71.53%. There is unresolved dissent regarding the shooting efficiency of Teams 13 and 14, which were refuted in deliberation.",
+    "roster": {
+      "question_type": "scouting",
+      "admitted_specialists": [
+        "context_sentiment_analyst",
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "admitted_researchers": [
+        "simple_stats",
+        "sentiment",
+        "odds"
+      ],
+      "dropped": []
+    },
+    "plan": {
+      "question": "Who are the 7 most clinical teams during season 2025-2026?",
+      "question_type": "scouting",
+      "deliverable": {
+        "format": "a ranked list of the 7 most clinical teams based on their shooting efficiency and conversion rates, including relevant statistics for each team.",
+        "subjects": [],
+        "cardinality": 7,
+        "dimensions": [],
+        "success_criteria": "The answer must list the 7 teams with their shooting efficiency and conversion rates."
+      },
+      "entities": [],
+      "required_evidence": [],
+      "assigned_specialists": [
+        "current_form_analyst",
+        "tactical_performance_analyst"
+      ],
+      "assigned_researchers": [
+        "simple_stats"
+      ],
+      "researcher_briefs": {
+        "simple_stats": "Gather structured statistics on team shooting efficiency and conversion rates for the 2025-2026 season."
+      },
+      "quant_models": [],
+      "reasoning": "The question requires an assessment of teams' clinical performance in terms of scoring efficiency, which aligns with the scouting type. The current form and tactical performance analysts will provide insights into recent trends and on-pitch effectiveness, while the simple_stats researcher will gather the necessary statistical data."
+    },
+    "retrieval": {
+      "requests_run": 1,
+      "records": 1,
+      "failures": [],
+      "negatives": [],
+      "workers": 1,
+      "breadth": 1,
+      "cache_stats": {}
+    },
+    "sufficiency": {
+      "sufficient": true,
+      "covered": [],
+      "missing_evidence": [],
+      "blocking": false,
+      "note": "All planned evidence covered.",
+      "reentry_cycle": 0
+    },
+    "claims": [
+      {
+        "claim_id": "C01",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Team 28 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.8,
+        "confidence_history": [
+          0.8
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "This indicates that Team 28 is highly clinical, converting every shot into a goal.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C02",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Team 31 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.8,
+        "confidence_history": [
+          0.8
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "This shows that Team 31 is also very clinical, scoring with every shot taken.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C03",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Team 13 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.8,
+        "confidence_history": [
+          0.8
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "This reflects Team 13's ability to convert all their shots into goals.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C04",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Team 14 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.8,
+        "confidence_history": [
+          0.8
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "This indicates that Team 14 is effectively converting every shot into a goal.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C05",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Teams with the highest shooting efficiency in the 2025-2026 season include teams 28, 31, 13, 14, and 2, all achieving a goals per shot ratio of 1.00 (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.85,
+        "confidence_history": [
+          0.85
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "These teams converted every shot taken into a goal, indicating exceptional clinical finishing.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C06",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Team 9 has a lower shooting efficiency with a goals per shot ratio of 0.50, scoring 4 goals from 8 shots (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.75,
+        "confidence_history": [
+          0.75
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "Despite scoring multiple goals, the conversion rate suggests less clinical finishing compared to teams with a 1.00 ratio.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C07",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 1,
+        "assertion": "Team 12 also demonstrates a goals per shot ratio of 0.50, scoring 1 goal from 2 shots, indicating moderate clinical efficiency (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.7,
+        "confidence_history": [
+          0.7
+        ],
+        "confidence_kind": "judgmental",
+        "status": "asserted",
+        "revisions": [],
+        "rationale": "This performance shows that while they scored, they did not capitalize on their shooting opportunities as effectively as the top teams.",
+        "depends_on": []
+      }
+    ],
+    "sweeps": [
+      {
+        "sweep": 1,
+        "filed": 7,
+        "admitted": 7,
+        "dropped": 0,
+        "revisions": 5,
+        "outcomes": [
+          {
+            "challenge_id": "X04",
+            "target_claim": "C01",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.8,
+            "post_confidence": 0.7381,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X05",
+            "target_claim": "C02",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.8,
+            "post_confidence": 0.7381,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X06",
+            "target_claim": "C03",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "concede",
+            "pre_confidence": 0.8,
+            "post_confidence": 0.4841,
+            "status": "refuted"
+          },
+          {
+            "challenge_id": "X07",
+            "target_claim": "C04",
+            "challenger": "Tactical Performance Analyst",
+            "kind": "inference_dispute",
+            "severity": "major",
+            "response": "concede",
+            "pre_confidence": 0.8,
+            "post_confidence": 0.4841,
+            "status": "refuted"
+          },
+          {
+            "challenge_id": "X01",
+            "target_claim": "C05",
+            "challenger": "Current Form Analyst",
+            "kind": "missing_evidence",
+            "severity": "major",
+            "response": "revise",
+            "pre_confidence": 0.85,
+            "post_confidence": 0.7997,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X02",
+            "target_claim": "C06",
+            "challenger": "Current Form Analyst",
+            "kind": "missing_evidence",
+            "severity": "minor",
+            "response": "revise",
+            "pre_confidence": 0.75,
+            "post_confidence": 0.6789,
+            "status": "revised"
+          },
+          {
+            "challenge_id": "X03",
+            "target_claim": "C07",
+            "challenger": "Current Form Analyst",
+            "kind": "missing_evidence",
+            "severity": "minor",
+            "response": "revise",
+            "pre_confidence": 0.7,
+            "post_confidence": 0.6218,
+            "status": "revised"
+          }
+        ]
+      }
+    ],
+    "cruxes": [
+      {
+        "action": "stable",
+        "reason": "pivotal but not further resolvable (carried as open cruxes)",
+        "cruxes": [
+          {
+            "crux_id": "K-C01",
+            "description": "C01 (Current Form Analyst) is pivotal: Team 28 has a shooting efficiency of 1.00 goals per shot based on a single shot ",
+            "pivotal_claims": [
+              "C01"
+            ],
+            "decision_flips_if": "confidence in C01 moves outside [0.48, 0.89]",
+            "unresolved": false,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C02",
+            "description": "C02 (Current Form Analyst) is pivotal: Team 31 has a shooting efficiency of 1.00 goals per shot based on a single shot ",
+            "pivotal_claims": [
+              "C02"
+            ],
+            "decision_flips_if": "confidence in C02 moves outside [0.48, 0.89]",
+            "unresolved": false,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C05",
+            "description": "C05 (Tactical Performance Analyst) is pivotal: Teams 28, 31, 13, 14, and 2 have achieved a goals per shot ratio of 1.00, but th",
+            "pivotal_claims": [
+              "C05"
+            ],
+            "decision_flips_if": "confidence in C05 moves outside [0.57, 0.92]",
+            "unresolved": false,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C06",
+            "description": "C06 (Tactical Performance Analyst) is pivotal: Team 9 has a lower shooting efficiency with a goals per shot ratio of 0.50, scor",
+            "pivotal_claims": [
+              "C06"
+            ],
+            "decision_flips_if": "confidence in C06 moves outside [0.41, 0.86]",
+            "unresolved": true,
+            "retrieval_request": []
+          },
+          {
+            "crux_id": "K-C07",
+            "description": "C07 (Tactical Performance Analyst) is pivotal: Team 12 has a goals per shot ratio of 0.50 from a single match, which suggests m",
+            "pivotal_claims": [
+              "C07"
+            ],
+            "decision_flips_if": "confidence in C07 moves outside [0.35, 0.83]",
+            "unresolved": true,
+            "retrieval_request": []
+          }
+        ]
+      }
+    ],
+    "evaluation": {
+      "passed": true,
+      "grounding_ok": true,
+      "calibration_ok": true,
+      "completeness_ok": true,
+      "failure": null,
+      "missing": [],
+      "notes": "every statement traces to a resolved, cited claim; confidence + dissent match the deterministic aggregation; blocking gaps were filled or surfaced as limitations",
+      "retries": 0
+    },
+    "contradictions": [],
+    "decision": {
+      "answer": "1. Team 28: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n2. Team 31: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n3. Team 13: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n4. Team 14: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n5. Team 2: Shooting Efficiency - 1.00 goals per shot (based on 1 shot)\n6. Team 9: Shooting Efficiency - 0.50 goals per shot (4 goals from 8 shots)\n7. Team 12: Shooting Efficiency - 0.50 goals per shot (1 goal from 2 shots)\n\nConfidence in this ranking is moderate at 71.53%. There is unresolved dissent regarding the shooting efficiency of Teams 13 and 14, which were refuted in deliberation.",
+      "confidence": 0.7153,
+      "confidence_kind": "judgmental",
+      "supporting_claims": [
+        "C05",
+        "C01",
+        "C02",
+        "C06",
+        "C07"
+      ],
+      "unresolved_dissent": [
+        {
+          "claim_id": "C03",
+          "owner": "Current Form Analyst",
+          "summary": "Refuted in deliberation (recorded): Team 13 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01)."
+        },
+        {
+          "claim_id": "C04",
+          "owner": "Current Form Analyst",
+          "summary": "Refuted in deliberation (recorded): Team 14 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01)."
+        }
+      ],
+      "open_cruxes": [
+        {
+          "crux_id": "K-C06",
+          "description": "C06 (Tactical Performance Analyst) is pivotal: Team 9 has a lower shooting efficiency with a goals per shot ratio of 0.50, scor",
+          "pivotal_claims": [
+            "C06"
+          ],
+          "decision_flips_if": "confidence in C06 moves outside [0.41, 0.86]",
+          "unresolved": true,
+          "retrieval_request": []
+        },
+        {
+          "crux_id": "K-C07",
+          "description": "C07 (Tactical Performance Analyst) is pivotal: Team 12 has a goals per shot ratio of 0.50 from a single match, which suggests m",
+          "pivotal_claims": [
+            "C07"
+          ],
+          "decision_flips_if": "confidence in C07 moves outside [0.35, 0.83]",
+          "unresolved": true,
+          "retrieval_request": []
+        }
+      ],
+      "citations": [
+        "E01"
+      ]
+    },
+    "evidence": [
+      {
+        "id": "E01",
+        "source_tool": "mcp:football-analytics.query_data",
+        "args_hash": "364c2ab0e7cfb3bd",
+        "args": {
+          "request": {
+            "dataset": "squad_shooting",
+            "limit": 7,
+            "order_by": "goals_per_shot",
+            "order_direction": "desc",
+            "select": [
+              "team_season_id",
+              "goals",
+              "shots",
+              "goals_per_shot"
+            ]
+          }
+        },
+        "payload": [
+          {
+            "team_season_id": 28,
+            "goals": "1",
+            "shots": "1",
+            "goals_per_shot": "1.00"
+          },
+          {
+            "team_season_id": 31,
+            "goals": "1",
+            "shots": "1",
+            "goals_per_shot": "1.00"
+          },
+          {
+            "team_season_id": 13,
+            "goals": "1",
+            "shots": "1",
+            "goals_per_shot": "1.00"
+          },
+          {
+            "team_season_id": 14,
+            "goals": "1",
+            "shots": "1",
+            "goals_per_shot": "1.00"
+          },
+          {
+            "team_season_id": 2,
+            "goals": "1",
+            "shots": "1",
+            "goals_per_shot": "1.00"
+          },
+          {
+            "team_season_id": 9,
+            "goals": "4",
+            "shots": "8",
+            "goals_per_shot": "0.50"
+          },
+          {
+            "team_season_id": 12,
+            "goals": "1",
+            "shots": "2",
+            "goals_per_shot": "0.50"
+          }
+        ],
+        "retrieved_at": 1781465181.3078952,
+        "strength_tier": "strong",
+        "source_trust": 1.0,
+        "provenance": "mcp:football-analytics",
+        "as_of": null,
+        "covers": [
+          "team shooting efficiency",
+          "conversion rates"
+        ],
+        "is_empty": false,
+        "is_negative_result": false
+      }
+    ],
+    "ledgerClaims": [
+      {
+        "claim_id": "C01",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 2,
+        "assertion": "Team 28 has a shooting efficiency of 1.00 goals per shot based on a single shot taken during the 2025-2026 season, which is not a reliable measure of their overall finishing ability (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.7381,
+        "confidence_history": [
+          0.8,
+          0.7381
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Team 28 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+            "confidence": 0.8
+          }
+        ],
+        "rationale": "The initial claim was based on a single shot, which does not provide a sufficient sample size to assess shooting efficiency accurately.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C02",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 2,
+        "assertion": "Team 31 has a shooting efficiency of 1.00 goals per shot based on a single shot taken during the 2025-2026 season, which is not a reliable measure of their overall finishing ability (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.7381,
+        "confidence_history": [
+          0.8,
+          0.7381
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Team 31 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+            "confidence": 0.8
+          }
+        ],
+        "rationale": "The initial claim did not account for the limited sample size of only one shot, which undermines the reliability of the shooting efficiency statistic.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C03",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Team 13 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.4841,
+        "confidence_history": [
+          0.8,
+          0.4841
+        ],
+        "confidence_kind": "judgmental",
+        "status": "refuted",
+        "revisions": [],
+        "rationale": "This reflects Team 13's ability to convert all their shots into goals.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C04",
+        "owner": "Current Form Analyst",
+        "dimension": "form",
+        "version": 1,
+        "assertion": "Team 14 has a shooting efficiency of 1.00 goals per shot during the 2025-2026 season (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.4841,
+        "confidence_history": [
+          0.8,
+          0.4841
+        ],
+        "confidence_kind": "judgmental",
+        "status": "refuted",
+        "revisions": [],
+        "rationale": "This indicates that Team 14 is effectively converting every shot into a goal.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C05",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 2,
+        "assertion": "Teams 28, 31, 13, 14, and 2 have achieved a goals per shot ratio of 1.00, but this is based on a limited sample size of only 1 shot each, which may not accurately reflect their overall shooting efficiency (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.7997,
+        "confidence_history": [
+          0.85,
+          0.7997
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Teams with the highest shooting efficiency in the 2025-2026 season include teams 28, 31, 13, 14, and 2, all achieving a goals per shot ratio of 1.00 (E01).",
+            "confidence": 0.85
+          }
+        ],
+        "rationale": "The challenge correctly points out that the teams' shooting efficiency is based on a very small sample size, which limits the reliability of the claim.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C06",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 2,
+        "assertion": "Team 9 has a lower shooting efficiency with a goals per shot ratio of 0.50, scoring 4 goals from 8 shots, but this is on par with Team 12, which also has a goals per shot ratio of 0.50 from 1 goal and 2 shots (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.6789,
+        "confidence_history": [
+          0.75,
+          0.6789
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Team 9 has a lower shooting efficiency with a goals per shot ratio of 0.50, scoring 4 goals from 8 shots (E01).",
+            "confidence": 0.75
+          }
+        ],
+        "rationale": "The revised claim acknowledges that Team 9's shooting efficiency is similar to another team's, providing a broader context for comparison.",
+        "depends_on": []
+      },
+      {
+        "claim_id": "C07",
+        "owner": "Tactical Performance Analyst",
+        "dimension": "tactical",
+        "version": 2,
+        "assertion": "Team 12 has a goals per shot ratio of 0.50 from a single match, which suggests moderate clinical efficiency, but this may not reflect their overall performance across the season (E01).",
+        "evidence_ids": [
+          "E01"
+        ],
+        "confidence": 0.6218,
+        "confidence_history": [
+          0.7,
+          0.6218
+        ],
+        "confidence_kind": "judgmental",
+        "status": "resolved",
+        "revisions": [
+          {
+            "version": 1,
+            "assertion": "Team 12 also demonstrates a goals per shot ratio of 0.50, scoring 1 goal from 2 shots, indicating moderate clinical efficiency (E01).",
+            "confidence": 0.7
+          }
+        ],
+        "rationale": "The original claim was based on a single match's data, which does not provide a comprehensive view of Team 12's shooting efficiency throughout the season.",
+        "depends_on": []
+      }
+    ],
+    "challenges": [
+      {
+        "challenge_id": "X01",
+        "target_claim": "C05",
+        "challenger": "Current Form Analyst",
+        "kind": "missing_evidence",
+        "evidence_ids": [
+          "E01"
+        ],
+        "inference_flaw": "",
+        "severity": "major",
+        "rationale": "The claim states that teams 28, 31, 13, 14, and 2 are the most clinical with a goals per shot ratio of 1.00, but it does not mention that these teams have only scored 1 goal each from 1 shot. This limited sample size may not accurately reflect their overall clinical efficiency across the season.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X02",
+        "target_claim": "C06",
+        "challenger": "Current Form Analyst",
+        "kind": "missing_evidence",
+        "evidence_ids": [
+          "E01"
+        ],
+        "inference_flaw": "",
+        "severity": "minor",
+        "rationale": "The claim about Team 9's shooting efficiency does not consider the context of their overall performance. While they have a goals per shot ratio of 0.50, it is important to compare this with other teams' performances over a larger sample size to assess their clinical efficiency accurately.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X03",
+        "target_claim": "C07",
+        "challenger": "Current Form Analyst",
+        "kind": "missing_evidence",
+        "evidence_ids": [
+          "E01"
+        ],
+        "inference_flaw": "",
+        "severity": "minor",
+        "rationale": "The claim regarding Team 12's moderate clinical efficiency with a goals per shot ratio of 0.50 does not provide a broader context of their performance. It only reflects a single match's outcome, which may not be indicative of their overall efficiency throughout the season.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X04",
+        "target_claim": "C01",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Claim assumes that a shooting efficiency of 1.00 goals per shot is indicative of clinical finishing without considering the sample size of shots taken, which is only 1 in this case.",
+        "severity": "major",
+        "rationale": "Team 28's shooting efficiency is based on a single shot, which does not provide a reliable measure of their overall clinicality in finishing.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X05",
+        "target_claim": "C02",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Claim assumes that a shooting efficiency of 1.00 goals per shot is indicative of clinical finishing without considering the sample size of shots taken, which is only 1 in this case.",
+        "severity": "major",
+        "rationale": "Team 31's shooting efficiency is based on a single shot, which does not provide a reliable measure of their overall clinicality in finishing.",
+        "status": "addressed",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X06",
+        "target_claim": "C03",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Claim assumes that a shooting efficiency of 1.00 goals per shot is indicative of clinical finishing without considering the sample size of shots taken, which is only 1 in this case.",
+        "severity": "major",
+        "rationale": "Team 13's shooting efficiency is based on a single shot, which does not provide a reliable measure of their overall clinicality in finishing.",
+        "status": "verified",
+        "target_version": 1
+      },
+      {
+        "challenge_id": "X07",
+        "target_claim": "C04",
+        "challenger": "Tactical Performance Analyst",
+        "kind": "inference_dispute",
+        "evidence_ids": [],
+        "inference_flaw": "Claim assumes that a shooting efficiency of 1.00 goals per shot is indicative of clinical finishing without considering the sample size of shots taken, which is only 1 in this case.",
+        "severity": "major",
+        "rationale": "Team 14's shooting efficiency is based on a single shot, which does not provide a reliable measure of their overall clinicality in finishing.",
+        "status": "verified",
+        "target_version": 1
+      }
+    ],
+    "responses": [
+      {
+        "response_id": "R01",
+        "challenge_id": "X04",
+        "author": "Current Form Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E01"
+        ],
+        "resulting_version": 2,
+        "rationale": "The initial claim was based on a single shot, which does not provide a sufficient sample size to assess shooting efficiency accurately."
+      },
+      {
+        "response_id": "R02",
+        "challenge_id": "X05",
+        "author": "Current Form Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E01"
+        ],
+        "resulting_version": 2,
+        "rationale": "The initial claim did not account for the limited sample size of only one shot, which undermines the reliability of the shooting efficiency statistic."
+      },
+      {
+        "response_id": "R03",
+        "challenge_id": "X06",
+        "author": "Current Form Analyst",
+        "move": "concede",
+        "added_evidence_ids": [],
+        "resulting_version": null,
+        "rationale": "The claim about Team 13's shooting efficiency is based on a single shot, which does not provide a reliable measure of their overall performance in finishing."
+      },
+      {
+        "response_id": "R04",
+        "challenge_id": "X07",
+        "author": "Current Form Analyst",
+        "move": "concede",
+        "added_evidence_ids": [],
+        "resulting_version": null,
+        "rationale": "The claim about Team 14's shooting efficiency is based on a single shot, which does not provide a reliable measure of their overall performance in finishing."
+      },
+      {
+        "response_id": "R05",
+        "challenge_id": "X01",
+        "author": "Tactical Performance Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E01"
+        ],
+        "resulting_version": 2,
+        "rationale": "The challenge correctly points out that the teams' shooting efficiency is based on a very small sample size, which limits the reliability of the claim."
+      },
+      {
+        "response_id": "R06",
+        "challenge_id": "X02",
+        "author": "Tactical Performance Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E01"
+        ],
+        "resulting_version": 2,
+        "rationale": "The revised claim acknowledges that Team 9's shooting efficiency is similar to another team's, providing a broader context for comparison."
+      },
+      {
+        "response_id": "R07",
+        "challenge_id": "X03",
+        "author": "Tactical Performance Analyst",
+        "move": "revise",
+        "added_evidence_ids": [
+          "E01"
+        ],
+        "resulting_version": 2,
+        "rationale": "The original claim was based on a single match's data, which does not provide a comprehensive view of Team 12's shooting efficiency throughout the season."
+      }
+    ]
+  }
+}
